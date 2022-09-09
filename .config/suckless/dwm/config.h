@@ -78,11 +78,12 @@ static const Layout layouts[] = {
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/usr/local/bin/st", "-c", cmd, NULL } }
-
+//#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 //static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+//static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[] = {"alacritty", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
