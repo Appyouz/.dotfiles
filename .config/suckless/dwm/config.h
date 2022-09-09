@@ -21,10 +21,15 @@ static const char dra_fg[]       = "#f8f8f2";
 static const char dra_cyan[]     = "#8be9fd";
 static const char dra_green[]    = "#50fa7b";
 static const char dra_orange[]   = "#ffb86c";
-static const char dra_pink[]	 = "#ff79c6";
+static const char dra_pink[]	   = "#ff79c6";
 static const char dra_purple[]	 = "#bd93f9";
 static const char dra_red[]	     = "#ff5555";
 static const char dra_yellow[]	 = "#f1fa8c";
+static const char *colors[][3]      = {
+	/*               fg         bg         border   */
+	[SchemeNorm] = {  dra_cyan, dra_bg, dra_bg },
+	[SchemeSel]  = { dra_red, dra_bg,  "#000000" },
+};
 
 //Pulseaudio
 #include <X11/XF86keysym.h>
@@ -33,11 +38,6 @@ static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+5%", NULL }
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 
 
-static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = {  dra_pink, dra_bg, dra_bg },
-	[SchemeSel]  = { dra_purple, dra_bg,  "#000000" },
-};
 
 /* tagging */
 //static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
