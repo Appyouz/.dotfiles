@@ -6,6 +6,8 @@
 [[ $- != *i* ]] && return
 alias ls='ls --color=auto'
 alias nv='nvim'
+alias push='git push -u origin main'
+
 
 PS1="\[\e[1;36m\]\[\033[31m\]\[\033[00m\]\n\w\[\e[1;33m\] \[\e[1;31m\] \[\e[1;37m\] \e[32m\]\[\e[1;37m\] "
 # PS1="\[\e[1;36m\]\[\033[31m\]\[\033[00m\]\n\w\[\e[1;37m\] \[\e[1;36m\]\[\e[1;37m\] "
