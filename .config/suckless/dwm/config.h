@@ -38,11 +38,13 @@ static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+5%", NULL }
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 
 
+/* Screenshot using scrot */
+static const char *screenshot[] = { "scrot", "/home/xmo/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL };
 
 /* tagging */
 //static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* static const char *tags[] = {" ","","","","","","","",""}; */
-static const char *tags[] = {"","","","","","",""}; 
+static const char *tags[] = {"","","","","","",""}; 
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -51,8 +53,8 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "Alacritty",NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Alacritty",NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "sublime-text",   NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
@@ -136,6 +138,7 @@ static const Key keys[] = {
 	{ 0, XF86XK_AudioMute, spawn, {.v = mutecmd } },
 	{ 0, XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
 	{ 0, XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
+	{ 0, XK_Print,                spawn, {.v = screenshot } },
 };
 
 /* button definitions */

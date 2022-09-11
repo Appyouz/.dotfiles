@@ -13,7 +13,7 @@ Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 
 
-
+Plug 'lukas-reineke/indent-blankline.nvim' "Indentation guide to all the lines
 " themes start
 Plug 'gruvbox-community/gruvbox' 
 Plug 'vim-airline/vim-airline' 
@@ -33,6 +33,7 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 
 call plug#end()
 set encoding=UTF-8
+
 
 
 
