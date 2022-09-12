@@ -54,8 +54,8 @@ endfunction
     inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
     inoremap <silent><expr> <c-space> coc#refresh()
 
-    hi CocSearch ctermfg=12 guifg=#18A3FF
-    hi CocMenuSel ctermbg=109 guibg=#13354A
+    " hi CocSearch ctermfg=12 guifg=#18A3FF
+    " hi CocMenuSel ctermbg=109 guibg=#13354A
     
 
 " Themes
@@ -68,22 +68,25 @@ nnoremap <c-t> <Esc>:NERDTreeToggle<cr>
 nnoremap <c-f> <Esc>:NERDTreeFocus<cr>
 nnoremap <c-n> <Esc>:NERDTree<cr>
 " nnoremap <c-l> <Esc>:call CocActionAsync('jumpDefinition')<cr>
-nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarToggle<CR>
 
+
+" Fuzzy Finder
 nnoremap <c-p> :Files <cr>
 
-" this key binding will not work if you don't have gvim install!
-" copy to system clipboard in Vitual Mode
 " to paste from system clipboard use Control+Shift+v
 " vmap <C-c> "+y
 "map key Control+y for copy from vim to system clipboard on 16-July-2020
 vnoremap <C-c> "*y :let @+=@*<CR>
-
-
 " easy paste long text from clipboard
 nnoremap <leader>pp "+p
 
 
+" Shortcutting split navigation, saving a keypress:
+	map <C-h> <C-w>h
+	map <C-j> <C-w>j
+	map <C-k> <C-w>k
+	map <C-l> <C-w>l
 
 
 let g:NERDTreeDirArrowExpandable="+"
@@ -103,4 +106,4 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+let g:airline_symbols.linenr = ' '

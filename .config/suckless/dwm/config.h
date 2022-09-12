@@ -44,7 +44,7 @@ static const char *screenshot[] = { "scrot", "/home/xmo/Pictures/Screenshots/%Y-
 /* tagging */
 //static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* static const char *tags[] = {" ","","","","","","","",""}; */
-static const char *tags[] = {"","","","","","",""}; 
+static const char *tags[] = {"","","","","","","","","ﯙ"}; 
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -54,8 +54,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Alacritty",NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "sublime-text",   NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "ncmpcpp",   NULL,      NULL,       1 << 5,       0,           -1 },
 };
 
 /* layout(s) */

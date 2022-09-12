@@ -1,5 +1,6 @@
-state
-log
+.mpd/state
+.mpd/log
+.mpd/pid
 database
 sticker.sql
 playlists/
