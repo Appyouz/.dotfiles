@@ -28,7 +28,7 @@ static const char dra_yellow[]	 = "#f1fa8c";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = {  dra_cyan, dra_bg, dra_bg },
-	[SchemeSel]  = { dra_red, dra_bg,  "#eeeeee" },
+	[SchemeSel]  = { dra_red, dra_bg,  "#005577" },
 };
 
 //Pulseaudio
