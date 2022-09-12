@@ -4,6 +4,7 @@ filetype plugin indent on
 set nu ts=2 sts=2 sw=2 et ai si rnu
 set nu rnu ai si ts=2 sts=2 sw=2 et 
 set mouse=a smarttab
+set clipboard+=unnamedplus
 
 call plug#begin()
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -70,6 +71,21 @@ nnoremap <c-n> <Esc>:NERDTree<cr>
 nmap <F8> :TagbarToggle<CR>
 
 nnoremap <c-p> :Files <cr>
+
+" this key binding will not work if you don't have gvim install!
+" copy to system clipboard in Vitual Mode
+" to paste from system clipboard use Control+Shift+v
+" vmap <C-c> "+y
+"map key Control+y for copy from vim to system clipboard on 16-July-2020
+vnoremap <C-c> "*y :let @+=@*<CR>
+
+
+" easy paste long text from clipboard
+nnoremap <leader>pp "+p
+
+
+
+
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
