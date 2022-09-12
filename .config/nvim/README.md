@@ -1,7 +1,6 @@
 # nvim
 
-A personal Neovim config along with c++ auto completion using ccls
-### clangd is much easier (imo) ###
+A personal Neovim config along with c++ auto completion using clangd
 
 ## Installation 
 Takes arch linux as a platform, just use your respective package manager for installing packages(for eg:- `sudo apt install` for debian)
@@ -10,10 +9,10 @@ Takes arch linux as a platform, just use your respective package manager for ins
 ``` bash 
 sudo pacman -S nodejs
 ``` 
-2. Install [Ccls](https://github.com/MaskRay/ccls)
+2. Install [Clangd](https://clangd.llvm.org/installation)
 
  ``` bash
- sudo pacman -S ccls
+ sudo pacman -S clangd
  ```
  
 3. You will be needing [vim-plug](https://github.com/junegunn/vim-plug#installation) to install the required plugins.
@@ -22,21 +21,22 @@ sudo pacman -S nodejs
 
 ## Usage
  - Once you are done installing vim-plug, 
- - Make a new directory inside `.config` folder named as `nvim` ( `mkdir .config/nvim`)<br>
- - open up the `init.vim` file and use the following commands<br>
- - (you might see some warnings just dont freak out, everything will be fine once done installing plugins) :
+ - Create a new directory inside `.config` folder named as `nvim` ( `mkdir .config/nvim`)<br>
+ - open up the `init.vim` file and use the following command<br>
+ - (you might see some warnings just dont freak out, everything will be fine once plugins are installed) :
 
 ```bash
 :PlugInstall
 ```
-After that create a file named as `.ccls` in your project folder and add these two lines:
-``` bash
-clang++
-%h %cpp -std=c++17
+In case you haven't installed clangd use the following command
+```bash
+:CocInstall coc-clangd
 ```
-That's it you are now good to go if no errors were occured
+Check this if you get confused or coc.nvim is not working as intended [coc.clangd](https://github.com/clangd/coc-clangd#quick-start) and [coc.nvim](https://github.com/clangd/coc-clangd#quick-start)
 
-You will need nerdfonts installed in your system for airline symbols mentioned in the init.vim file.
+That's it 
+
+<mark>Note: You will need [nerdfonts](https://www.nerdfonts.com/font-downloads) installed in your system for airline symbols mentioned in the init.vim file.</mark>
 
 
 ## License
