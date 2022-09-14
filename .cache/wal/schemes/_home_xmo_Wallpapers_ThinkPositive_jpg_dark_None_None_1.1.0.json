@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/xmo/Wallpapers/ThinkPositive.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#09090A",
+        "foreground": "#77c3bd",
+        "cursor": "#77c3bd"
+    },
+    "colors": {
+        "color0": "#09090A",
+        "color1": "#645711",
+        "color2": "#08635D",
+        "color3": "#B8500F",
+        "color4": "#289063",
+        "color5": "#C5A815",
+        "color6": "#017E81",
+        "color7": "#77c3bd",
+        "color8": "#538884",
+        "color9": "#645711",
+        "color10": "#08635D",
+        "color11": "#B8500F",
+        "color12": "#289063",
+        "color13": "#C5A815",
+        "color14": "#017E81",
+        "color15": "#77c3bd"
+    }
+}

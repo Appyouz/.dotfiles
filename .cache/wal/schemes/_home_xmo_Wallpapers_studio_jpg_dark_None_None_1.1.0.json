@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/xmo/Wallpapers/studio.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#1b0e0d",
+        "foreground": "#d5dfce",
+        "cursor": "#d5dfce"
+    },
+    "colors": {
+        "color0": "#1b0e0d",
+        "color1": "#944534",
+        "color2": "#94615B",
+        "color3": "#979B6E",
+        "color4": "#C9A66C",
+        "color5": "#927483",
+        "color6": "#A1AE8B",
+        "color7": "#d5dfce",
+        "color8": "#959c90",
+        "color9": "#944534",
+        "color10": "#94615B",
+        "color11": "#979B6E",
+        "color12": "#C9A66C",
+        "color13": "#927483",
+        "color14": "#A1AE8B",
+        "color15": "#d5dfce"
+    }
+}

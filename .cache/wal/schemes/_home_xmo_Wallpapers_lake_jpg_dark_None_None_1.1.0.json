@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/xmo/Wallpapers/lake.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0B0F11",
+        "foreground": "#beafc6",
+        "cursor": "#beafc6"
+    },
+    "colors": {
+        "color0": "#0B0F11",
+        "color1": "#B0837E",
+        "color2": "#223B86",
+        "color3": "#1D52A0",
+        "color4": "#2E5AA9",
+        "color5": "#504E8B",
+        "color6": "#6564A1",
+        "color7": "#beafc6",
+        "color8": "#857a8a",
+        "color9": "#B0837E",
+        "color10": "#223B86",
+        "color11": "#1D52A0",
+        "color12": "#2E5AA9",
+        "color13": "#504E8B",
+        "color14": "#6564A1",
+        "color15": "#beafc6"
+    }
+}
