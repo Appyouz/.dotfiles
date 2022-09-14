@@ -15,12 +15,13 @@ static const char *prompt      = NULL;      /* -p  option; prompt to the left of
 	//[SchemeSel] = { "#eeeeee", "#005577" },
 	//[SchemeOut] = { "#000000", "#00ffff" },
 //};
-static const char *colors[SchemeLast][2] = {
-	/*     fg         bg       */
-	[SchemeNorm] = { "#f8f8f2", "#282a36" },
-	[SchemeSel] = { "#ff5555", "#282a36" },
-	[SchemeOut] = { "#000000", "#00ffff" },
-};
+#include "/home/xmo/.cache/wal/colors-wal-dmenu.h"
+/* static const char *colors[SchemeLast][2] = { */
+/* 	/1*     fg         bg       *1/ */
+/* 	[SchemeNorm] = { "#f8f8f2", "#282a36" }, */
+/* 	[SchemeSel] = { "#ff5555", "#282a36" }, */
+/* 	[SchemeOut] = { "#000000", "#00ffff" }, */
+/* }; */
 
 
 /* -l and -g options; controls number of lines and columns in grid if > 0 */

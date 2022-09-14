@@ -25,11 +25,12 @@ static const char dra_pink[]	   = "#ff79c6";
 static const char dra_purple[]	 = "#bd93f9";
 static const char dra_red[]	     = "#ff5555";
 static const char dra_yellow[]	 = "#f1fa8c";
-static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = {  dra_cyan, dra_bg, dra_bg },
-	[SchemeSel]  = { dra_red, dra_bg,  "#005577" },
-};
+#include "/home/xmo/.cache/wal/colors-wal-dwm.h"
+/* static const char *colors[][3]      = { */
+/* 	/1*               fg         bg         border   *1/ */
+/* 	[SchemeNorm] = {  dra_cyan, dra_bg, dra_bg }, */
+/* 	[SchemeSel]  = { dra_red, dra_bg,  "#005577" }, */
+/* }; */
 
 //Pulseaudio
 #include <X11/XF86keysym.h>
