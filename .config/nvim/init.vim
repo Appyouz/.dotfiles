@@ -1,20 +1,18 @@
 syntax on
 filetype plugin indent on
 
-set nu ts=2 sts=2 sw=2 et ai si rnu
 set nu rnu ai si ts=2 sts=2 sw=2 et 
 set mouse=a smarttab
 set clipboard+=unnamedplus
 
 call plug#begin()
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs' " auto pairs 
 Plug 'preservim/nerdtree' " NerdTree for toggling directories
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-
-
 Plug 'lukas-reineke/indent-blankline.nvim' "Indentation guide to all the lines
+
 " themes start
 Plug 'gruvbox-community/gruvbox' 
 Plug 'vim-airline/vim-airline' 
