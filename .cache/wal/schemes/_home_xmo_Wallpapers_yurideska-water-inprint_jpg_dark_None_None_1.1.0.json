@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/xmo/Wallpapers/yurideska-water-inprint.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0d0c0c",
+        "foreground": "#cac9c7",
+        "cursor": "#cac9c7"
+    },
+    "colors": {
+        "color0": "#0d0c0c",
+        "color1": "#393F44",
+        "color2": "#5D4F4C",
+        "color3": "#757474",
+        "color4": "#8C5C52",
+        "color5": "#8A837D",
+        "color6": "#8F8E8E",
+        "color7": "#cac9c7",
+        "color8": "#8d8c8b",
+        "color9": "#393F44",
+        "color10": "#5D4F4C",
+        "color11": "#757474",
+        "color12": "#8C5C52",
+        "color13": "#8A837D",
+        "color14": "#8F8E8E",
+        "color15": "#cac9c7"
+    }
+}

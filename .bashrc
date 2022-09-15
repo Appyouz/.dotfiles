@@ -16,4 +16,4 @@ alias push='git push -u origin main'
 # PS1="\e[00;36m\]┌─[ \e[00;37m\]\T \d \e[00;36m\]]──\e[00;31m\]>\e[00;37m\] \u\e[00;31m\]@\e[00;37m\]\h\n\e[00;36m\]|\n\e[00;36m\]└────\e[00;31m\]> \e[00;37m\]\w \e[00;31m\]\$ \e[01;37m\] "
 
 PATH="$HOME/.local/bin${PATH:+:${PATH}}"
-export PATH="$HOME/.dotfiles/bin/:$PATH"
+export PATH="$HOME/.dotfiles.local/bin/:$PATH"

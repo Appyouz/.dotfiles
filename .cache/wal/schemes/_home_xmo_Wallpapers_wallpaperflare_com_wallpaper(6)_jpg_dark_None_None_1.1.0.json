@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/xmo/Wallpapers/wallpaperflare.com_wallpaper(6).jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#11091a",
+        "foreground": "#cca4ce",
+        "cursor": "#cca4ce"
+    },
+    "colors": {
+        "color0": "#11091a",
+        "color1": "#8A5374",
+        "color2": "#D89B65",
+        "color3": "#62398C",
+        "color4": "#714693",
+        "color5": "#7848CA",
+        "color6": "#956193",
+        "color7": "#cca4ce",
+        "color8": "#8e7290",
+        "color9": "#8A5374",
+        "color10": "#D89B65",
+        "color11": "#62398C",
+        "color12": "#714693",
+        "color13": "#7848CA",
+        "color14": "#956193",
+        "color15": "#cca4ce"
+    }
+}

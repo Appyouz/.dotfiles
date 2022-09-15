@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/xmo/Wallpapers/yurideska-wind-inprint.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#170f0f",
+        "foreground": "#d2c6c6",
+        "cursor": "#d2c6c6"
+    },
+    "colors": {
+        "color0": "#170f0f",
+        "color1": "#665656",
+        "color2": "#8B4C51",
+        "color3": "#AA5855",
+        "color4": "#A66B6C",
+        "color5": "#A77F80",
+        "color6": "#B59E9E",
+        "color7": "#d2c6c6",
+        "color8": "#938a8a",
+        "color9": "#665656",
+        "color10": "#8B4C51",
+        "color11": "#AA5855",
+        "color12": "#A66B6C",
+        "color13": "#A77F80",
+        "color14": "#B59E9E",
+        "color15": "#d2c6c6"
+    }
+}
