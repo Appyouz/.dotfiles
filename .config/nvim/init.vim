@@ -30,11 +30,19 @@ Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 call plug#end()
 set encoding=UTF-8
 
-
-
+nmap <Leader>z <Plug>(Prettier)
+" let g:prettier#autoformat_config_present = 1
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#exec_cmd_async = 1
+" when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 0
+autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -86,7 +94,10 @@ nnoremap <leader>pp "+p
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
 
+"Prettier
 
+
+"NerdTree
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
