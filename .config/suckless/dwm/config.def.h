@@ -25,6 +25,10 @@ static const char dra_pink[]	   = "#ff79c6";
 static const char dra_purple[]	 = "#bd93f9";
 static const char dra_red[]	     = "#ff5555";
 static const char dra_yellow[]	 = "#f1fa8c";
+static const unsigned int baralpha = 150;
+static const unsigned int borderalpha = 10;
+/* static const unsigned int borderalpha = OPAQUE; */
+
 #include "/home/xmo/.cache/wal/colors-wal-dwm.h"
 /* static const char *colors[][3]      = { */
 /* 	/1*               fg         bg         border   *1/ */
@@ -32,6 +36,13 @@ static const char dra_yellow[]	 = "#f1fa8c";
 /* 	[SchemeSel]  = { dra_red, dra_bg,  "#005577" }, */
 /* }; */
 
+
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
+ 
 //Pulseaudio
 #include <X11/XF86keysym.h>
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
