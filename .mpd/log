@@ -92,3 +92,21 @@ Sep 16 21:18 : player: played "B-8EIGHT - K Yo Maya Ho [OFFICIAL VIDEO].m4a"
 Sep 16 21:23 : player: played "Eminem - Love The Way You Lie ft. Rihanna.m4a"
 Sep 16 21:28 : player: played "Jhyalai Ma - Azay Shumsher Rana _ Ethos Band (Nepali Pop Song).m4a"
 Sep 16 21:32 : player: played "Timinai Hau Meri Mann ki Rani.m4a"
+Sep 16 22:19 : config: option 'mixer_device' on line 223 was not recognized
+Sep 16 22:19 : config: option 'mixer_control' on line 224 was not recognized
+Sep 16 22:19 : config: option 'mixer_index' on line 225 was not recognized
+Sep 16 22:20 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 16 22:23 : player: played "Elley Duhé - Middle of the Night (Lyrics).m4a"
+Sep 16 22:25 : player: played "Jack Harlow - First Class [Official Music Video].m4a"
+Sep 16 22:29 : player: played "Replay (Prequel) [Music Video] - Iyaz.m4a"
+Sep 16 22:32 : player: played "Hanezeve Caradhina (ft.Takeshi Saito) _ Made in Abyss OST [ Lyrics ].m4a"
+Sep 16 22:35 : player: played "U & Cloud - Blue Exorcist OST - Hiroyuki Sawano.m4a"
+Sep 16 22:51 : config: option 'mixer_device' on line 223 was not recognized
+Sep 16 22:51 : config: option 'mixer_control' on line 224 was not recognized
+Sep 16 22:51 : config: option 'mixer_index' on line 225 was not recognized
+Sep 16 22:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 16 22:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 16 22:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 16 22:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 16 22:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 16 22:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun

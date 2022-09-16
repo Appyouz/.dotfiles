@@ -58,7 +58,7 @@ static const char *screenshot[] = { "scrot", "/home/xmo/Pictures/Screenshots/%Y-
 /* tagging */
 //static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* static const char *tags[] = {" ","","","","","","","",""}; */
-static const char *tags[] = {"","","","","","","","","ﯙ"}; 
+static const char *tags[] = {"","","","","","","ﯙ","",""}; 
 
 static const Rule rules[] = {
 	/* xprop(1):
