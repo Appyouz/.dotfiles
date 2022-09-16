@@ -29,20 +29,32 @@ Plug 'junegunn/fzf.vim'
 "Tagbar
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
-
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+
+Plug 'mxw/vim-jsx'
+" Syntax hightlight for .js
+" Plug 'pangloss/vim-javascript'
+
+ " Plug 'glepnir/dashboard-nvim'
 call plug#end()
 set encoding=UTF-8
 
+
+
+ " coc-react-refactor
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+"Prettier
 nmap <Leader>z <Plug>(Prettier)
-" let g:prettier#autoformat_config_present = 1
-let g:prettier#autoformat = 1
+ let g:prettier#autoformat_config_present = 1
+" let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#exec_cmd_async = 1
 " when running at every change you may want to disable quickfix
-let g:prettier#quickfix_enabled = 0
-autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
+  " let g:prettier#quickfix_enabled = 1
+  " autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -60,13 +72,13 @@ endfunction
     inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
     inoremap <silent><expr> <c-space> coc#refresh()
 
-    " hi CocSearch ctermfg=12 guifg=#18A3FF
-    " hi CocMenuSel ctermbg=109 guibg=#13354A
+     " hi CocSearch ctermfg=12 guifg=#18A3FF
+     " hi CocMenuSel ctermbg=109 guibg=#13354A
     
 
 " Themes
-set termguicolors
-color gruvbox
+ set termguicolors
+ color gruvbox
 
 "NerdTree keybindings
 inoremap <c-t> <Esc>:NERDTreeToggle<cr>
@@ -74,7 +86,7 @@ nnoremap <c-t> <Esc>:NERDTreeToggle<cr>
 nnoremap <c-f> <Esc>:NERDTreeFocus<cr>
 nnoremap <c-n> <Esc>:NERDTree<cr>
 " nnoremap <c-l> <Esc>:call CocActionAsync('jumpDefinition')<cr>
-" nmap <F8> :TagbarToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 
 " Fuzzy Finder
@@ -93,8 +105,6 @@ nnoremap <leader>pp "+p
 	map <C-j> <C-w>j
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
-
-"Prettier
 
 
 "NerdTree
@@ -116,3 +126,7 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ' '
+
+
+
+ 
