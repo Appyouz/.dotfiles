@@ -95,8 +95,6 @@ char *termname = "st-256color";
  *	stty tabs
  */
 unsigned int tabspaces = 8;
-/* bg opacity */
-float alpha = 0.8;
 
 
 #include "/home/xmo/.cache/wal/colors-wal-st.h"
