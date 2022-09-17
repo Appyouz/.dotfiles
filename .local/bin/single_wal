@@ -2,7 +2,7 @@
 
 echo "Choosing  wallpaper..."
 # wall=$(find $HOME/Wallpapers -type f | shuf -n 1)
-wall=~/Wallpapers/rosegirl.jpg
+wall=~/Pictures/Wallpapers/rosegirl.jpg
 echo "Setting up wallpaper"
 xwallpaper --zoom $wall
 echo "Generating wallpaper"
@@ -12,5 +12,4 @@ echo "Recompiling dwm..."
 (cd $HOME/.config/suckless/dwm && sudo make clean install>/dev/null) &
 (cd $HOME/.config/suckless/dmenu && sudo make clean install>/dev/null) &
 (cd $HOME/.config/suckless/st && sudo make clean install>/dev/null)
-
 echo "Restart dwm for the new look"

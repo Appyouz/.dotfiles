@@ -1,5 +1,5 @@
 " Special
-let wallpaper  = "/home/xmo/Wallpapers/rosegirl.jpg"
+let wallpaper  = "/home/xmo/Pictures/Wallpapers/rosegirl.jpg"
 let background = "#0a0a0b"
 let foreground = "#d1cacb"
 let cursor     = "#d1cacb"
