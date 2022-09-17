@@ -70,3 +70,15 @@ Sep 17 18:54 : player: played "Timinai Hau Meri Mann ki Rani.m4a"
 Sep 17 18:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Sep 17 18:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Sep 17 18:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 18:56 : player: played "Timinai Hau Meri Mann ki Rani.m4a"
+Sep 17 18:56 : config: option 'mixer_device' on line 223 was not recognized
+Sep 17 18:56 : config: option 'mixer_control' on line 224 was not recognized
+Sep 17 18:56 : config: option 'mixer_index' on line 225 was not recognized
+Sep 17 18:57 : update: added /Nightcore ⇢ I see your monsters (Lyrics).m4a
+Sep 17 18:57 : update: added /Zara Larsson - Lush Life (RIOT Remix).m4a
+Sep 17 18:57 : update: added /Nightcore - Senbonzakura (CLAWZ Remix).m4a
+Sep 17 18:57 : update: added /Doja Cat - Kiss Me More (Lyrics) ft. SZA.m4a
+Sep 17 18:57 : player: played "Doja Cat - Kiss Me More (Lyrics) ft. SZA.m4a"
+Sep 17 18:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 18:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 19:00 : player: played "Nightcore ⇢ I see your monsters (Lyrics).m4a"
