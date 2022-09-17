@@ -55,6 +55,7 @@ static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "10", NULL };
 /* Screenshot using scrot */
 static const char *screenshot[] = { "scrot", "/home/xmo/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL };
 
+static const char *pkill[] = {"pkill", "dwm", NULL};
 /* tagging */
 //static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* static const char *tags[] = {" ","","","","","","","",""}; */
@@ -146,6 +147,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY,                       XK_q,      spawn,          {.v = pkill} },
 	{ MODKEY|ControlMask,		        XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	
