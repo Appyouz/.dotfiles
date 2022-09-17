@@ -11,5 +11,4 @@ echo "Recompiling dwm..."
 (cd $HOME/.config/suckless/dwm && sudo make clean install>/dev/null) &
 (cd $HOME/.config/suckless/dmenu && sudo make clean install>/dev/null) &
 (cd $HOME/.config/suckless/st && sudo make clean install>/dev/null)
-
 echo "Restart dwm for the new look"

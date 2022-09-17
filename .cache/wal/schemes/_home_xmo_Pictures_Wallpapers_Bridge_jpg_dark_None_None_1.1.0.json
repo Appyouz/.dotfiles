@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/xmo/Pictures/Wallpapers/Bridge.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#111213",
+        "foreground": "#c0c5c5",
+        "cursor": "#c0c5c5"
+    },
+    "colors": {
+        "color0": "#111213",
+        "color1": "#57605F",
+        "color2": "#566972",
+        "color3": "#6D726C",
+        "color4": "#80837A",
+        "color5": "#637A86",
+        "color6": "#758A93",
+        "color7": "#c0c5c5",
+        "color8": "#868989",
+        "color9": "#57605F",
+        "color10": "#566972",
+        "color11": "#6D726C",
+        "color12": "#80837A",
+        "color13": "#637A86",
+        "color14": "#758A93",
+        "color15": "#c0c5c5"
+    }
+}

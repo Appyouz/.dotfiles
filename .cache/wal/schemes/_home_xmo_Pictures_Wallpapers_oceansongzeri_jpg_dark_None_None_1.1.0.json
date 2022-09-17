@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/xmo/Pictures/Wallpapers/oceansongzeri.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#190f12",
+        "foreground": "#dbd4d3",
+        "cursor": "#dbd4d3"
+    },
+    "colors": {
+        "color0": "#190f12",
+        "color1": "#C59D63",
+        "color2": "#DB956A",
+        "color3": "#496897",
+        "color4": "#9F7492",
+        "color5": "#5CAEC5",
+        "color6": "#DDA997",
+        "color7": "#dbd4d3",
+        "color8": "#999493",
+        "color9": "#C59D63",
+        "color10": "#DB956A",
+        "color11": "#496897",
+        "color12": "#9F7492",
+        "color13": "#5CAEC5",
+        "color14": "#DDA997",
+        "color15": "#dbd4d3"
+    }
+}
