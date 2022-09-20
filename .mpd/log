@@ -90,3 +90,33 @@ Sep 17 21:17 : player: played "Nightcore ⇢ I see your monsters (Lyrics).m4a"
 Sep 17 21:17 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
 Sep 17 21:17 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
 Sep 17 21:26 : player: played "Jhyalai Ma - Azay Shumsher Rana _ Ethos Band (Nepali Pop Song).m4a"
+Sep 17 22:47 : config: option 'mixer_device' on line 223 was not recognized
+Sep 17 22:47 : config: option 'mixer_control' on line 224 was not recognized
+Sep 17 22:47 : config: option 'mixer_index' on line 225 was not recognized
+Sep 17 22:50 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Sep 17 22:50 : player: played "Jhyalai Ma - Azay Shumsher Rana _ Ethos Band (Nepali Pop Song).m4a"
+Sep 17 22:50 : config: option 'mixer_device' on line 223 was not recognized
+Sep 17 22:50 : config: option 'mixer_control' on line 224 was not recognized
+Sep 17 22:50 : config: option 'mixer_index' on line 225 was not recognized
+Sep 17 22:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 22:55 : player: played "Jhyalai Ma - Azay Shumsher Rana _ Ethos Band (Nepali Pop Song).m4a"
+Sep 17 22:58 : player: played "Zara Larsson - Lush Life (RIOT Remix).m4a"
+Sep 17 23:00 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 23:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 23:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 23:05 : player: played "Akon - Right Now (Na Na Na).m4a"
+Sep 17 23:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 23:09 : player: played "Akon - Right Now (Na Na Na).m4a"
+Sep 17 23:13 : player: played "Akon - Right Now (Na Na Na).m4a"
+Sep 17 23:17 : player: played "B-8EIGHT - K Yo Maya Ho [OFFICIAL VIDEO].m4a"
+Sep 17 23:19 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 23:23 : player: played "B-8EIGHT - K Yo Maya Ho [OFFICIAL VIDEO].m4a"
+Sep 17 23:23 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 23:27 : player: played "Shakira - Hips Don't Lie (Official 4K Video) ft. Wyclef Jean.m4a"
+Sep 17 23:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 23:31 : player: played "Timinai Hau Meri Mann ki Rani.m4a"
+Sep 17 23:34 : player: played "Nightcore ⇢ I see your monsters (Lyrics).m4a"
+Sep 17 23:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 23:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 23:47 : player: played "Nightcore - Senbonzakura (CLAWZ Remix).m4a"
+Sep 17 23:49 : player: played "Shakira - Hips Don't Lie (Official 4K Video) ft. Wyclef Jean.m4a"

@@ -74,7 +74,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "st",       NULL,      NULL,        1 << 2,       0,           -1 },
+	/* { "st",       NULL,      NULL,        1 << 2,       0,           -1 }, */
 };
 
 /* layout(s) */
@@ -105,7 +105,8 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/usr/local/bin/st", "-c", cmd, NULL } }
 //#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", NULL };
+/* static const char *dmenucmd[] = { "dmenu_run", NULL }; */
+static const char *dmenucmd[] = { "dmenu_run","-p","Applications: ", NULL };
 //static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 /* static const char *termcmd[] = {"alacritty", NULL}; */

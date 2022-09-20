@@ -9,6 +9,7 @@ static const char *fonts[] = {
 	"Hack Nerd Font:size=15:style:medium"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+/* static const char *prompt      = "apps";      /1* -p  option; prompt to the left of input field *1/ */
 //static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	//[SchemeNorm] = { "#bbbbbb", "#222222" },

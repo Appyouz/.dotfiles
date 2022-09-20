@@ -38,6 +38,7 @@ Plug 'mxw/vim-jsx'
 
  " Plug 'glepnir/dashboard-nvim'
 call plug#end()
+
 set encoding=UTF-8
 
 
