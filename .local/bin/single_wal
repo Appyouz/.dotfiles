@@ -3,6 +3,7 @@
 echo "Choosing  wallpaper..."
 # wall=$(find $HOME/Wallpapers -type f | shuf -n 1)
 wall=~/Pictures/Wallpapers/rosegirl.jpg
+# wall=~/Pictures/Wallpapers/rin.jpg
 echo "Setting up wallpaper"
 xwallpaper --zoom $wall
 echo "Generating wallpaper"

@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 5;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -30,7 +30,7 @@ static const char dra_purple[]	 = "#bd93f9";
 static const char dra_red[]	     = "#ff5555";
 static const char dra_yellow[]	 = "#f1fa8c";
 static const unsigned int baralpha = 150;
-static const unsigned int borderalpha = 10;
+static const unsigned int borderalpha = 150;
 /* static const unsigned int borderalpha = OPAQUE; */
 
 #include "/home/xmo/.cache/wal/colors-wal-dwm.h"
