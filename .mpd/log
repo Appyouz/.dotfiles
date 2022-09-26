@@ -120,3 +120,40 @@ Sep 17 23:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Sep 17 23:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Sep 17 23:47 : player: played "Nightcore - Senbonzakura (CLAWZ Remix).m4a"
 Sep 17 23:49 : player: played "Shakira - Hips Don't Lie (Official 4K Video) ft. Wyclef Jean.m4a"
+Sep 22 20:33 : config: option 'mixer_device' on line 223 was not recognized
+Sep 22 20:33 : config: option 'mixer_control' on line 224 was not recognized
+Sep 22 20:33 : config: option 'mixer_index' on line 225 was not recognized
+Sep 22 20:36 : player: played "U & Cloud - Blue Exorcist OST - Hiroyuki Sawano.m4a"
+Sep 22 22:10 : config: option 'mixer_device' on line 223 was not recognized
+Sep 22 22:10 : config: option 'mixer_control' on line 224 was not recognized
+Sep 22 22:10 : config: option 'mixer_index' on line 225 was not recognized
+Sep 22 22:10 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 22 22:10 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 22 22:15 : player: played "Eminem - Love The Way You Lie ft. Rihanna.m4a"
+Sep 22 22:18 : player: played "Shakira - Hips Don't Lie (Official 4K Video) ft. Wyclef Jean.m4a"
+Sep 22 22:22 : player: played "Akon - Right Now (Na Na Na).m4a"
+Sep 22 22:25 : player: played "Jack Harlow - First Class [Official Music Video].m4a"
+Sep 22 22:28 : player: played "Nightcore ⇢ I see your monsters (Lyrics).m4a"
+Sep 22 22:31 : player: played "Replay (Prequel) [Music Video] - Iyaz.m4a"
+Sep 22 22:35 : player: played "Zara Larsson - Lush Life (RIOT Remix).m4a"
+Sep 22 22:39 : player: played "Nightcore - Senbonzakura (CLAWZ Remix).m4a"
+Sep 22 22:44 : player: played "Jhyalai Ma - Azay Shumsher Rana _ Ethos Band (Nepali Pop Song).m4a"
+Sep 22 22:48 : player: played "B-8EIGHT - K Yo Maya Ho [OFFICIAL VIDEO].m4a"
+Sep 22 22:52 : player: played "Timinai Hau Meri Mann ki Rani.m4a"
+Sep 22 22:56 : player: played "Doja Cat - Kiss Me More (Lyrics) ft. SZA.m4a"
+Sep 22 22:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 22 22:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 22 23:00 : player: played "Nightcore ⇢ I see your monsters (Lyrics).m4a"
+Sep 22 23:02 : player: played "Replay (Prequel) [Music Video] - Iyaz.m4a"
+Sep 22 23:29 : config: option 'mixer_device' on line 223 was not recognized
+Sep 22 23:29 : config: option 'mixer_control' on line 224 was not recognized
+Sep 22 23:29 : config: option 'mixer_index' on line 225 was not recognized
+Sep 22 23:33 : player: played "Timinai Hau Meri Mann ki Rani.m4a"
+Sep 23 13:08 : config: option 'mixer_device' on line 223 was not recognized
+Sep 23 13:08 : config: option 'mixer_control' on line 224 was not recognized
+Sep 23 13:08 : config: option 'mixer_index' on line 225 was not recognized
+Sep 23 13:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 13:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 13:11 : player: played "Elley Duhé - Middle of the Night (Lyrics).m4a"
+Sep 23 13:15 : player: played "Shakira - Hips Don't Lie (Official 4K Video) ft. Wyclef Jean.m4a"
+Sep 23 13:19 : player: played "Jhyalai Ma - Azay Shumsher Rana _ Ethos Band (Nepali Pop Song).m4a"

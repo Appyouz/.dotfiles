@@ -2,8 +2,8 @@ sw_volume: 70
 audio_device_state:1:My ALSA Device
 audio_device_state:1:Visualizer feed
 state: play
-current: 4
-time: 115.997000
+current: 9
+time: 244.222000
 random: 1
 repeat: 0
 single: 0
@@ -25,4 +25,6 @@ playlist_begin
 10:Zara Larsson - Lush Life (RIOT Remix).m4a
 11:Akon - Right Now (Na Na Na).m4a
 12:B-8EIGHT - K Yo Maya Ho [OFFICIAL VIDEO].m4a
+13:Elley Duhé - Middle of the Night (Lyrics).m4a
+14:Hanezeve Caradhina (ft.Takeshi Saito) _ Made in Abyss OST [ Lyrics ].m4a
 playlist_end
