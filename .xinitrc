@@ -1,6 +1,7 @@
-xrandr --output LVDS1 --mode 1366x768 &
-xrandr --output LVDS1 --auto &
-wal -R &
-picom &
-exec slstatus &
-exec startdwm 
+#!/bin/sh
+
+# Make sure this is before the 'exec' command or it won't be sourced.
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
+
+
