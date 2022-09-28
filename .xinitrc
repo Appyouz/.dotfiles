@@ -4,4 +4,3 @@ wal -R &
 picom &
 exec slstatus &
 exec startdwm 
-

@@ -68,7 +68,16 @@ static const char unknown_str[] = "n/a";
  // { battery_perc, " %s",           "BAT0" },
   //{ datetime, " %s",           "%a, %b %d %R" },
 //};
-
+// static const struct arg args[] = {
+//     /* function         format              argument */
+//     { disk_free,          " %s " ,                  "/"      },
+//     { disk_total,         "/%s " ,                  "/"      },
+//    
+//     { battery_perc,     "  %s%% ",            "BAT0" },
+//     { wifi_essid,       "  %s ",           "wlp6s0" },
+//     { datetime,         "  %s ",        "%a, %d/%m/%y" },
+//     { datetime,         "  %s ",        "%H:%M" },
+// };
 
  
 
@@ -76,9 +85,10 @@ static const struct arg args[] = {
     /* function         format              argument */
     { disk_free,          " %s " ,                  "/"      },
     { disk_total,         "/%s " ,                  "/"      },
-   
-    { battery_perc,     "  %s%% ",            "BAT0" },
     { wifi_essid,       "  %s ",           "wlp6s0" },
-    { datetime,         "  %s ",        "%a, %d/%m/%y" },
-    { datetime,         "  %s ",        "%H:%M" },
+//	{ run_command,	" %s ", "updates.sh " },
+	//{ run_command,	" %s ", "vol.sh " },
+  { datetime,         "  %s ",        "%a, %d/%m/%y" },
+  { datetime,         "  %s ",        "%I:%M%p" },
+
 };
