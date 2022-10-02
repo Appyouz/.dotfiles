@@ -97,7 +97,7 @@ unsigned int tabspaces = 8;
 float alpha = 0.8;
 
 
-#include "/home/xmo/.cache/wal/colors-wal-st.h"
+#include "/home/mac/.cache/wal/colors-wal-st.h"
 /* Terminal colors (16 first used in escape sequence) */
 /* static const char *colorname[] = { */
 /* 	/1* 8 normal colors *1/ */

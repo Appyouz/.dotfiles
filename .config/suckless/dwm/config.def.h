@@ -33,7 +33,7 @@ static const unsigned int baralpha = 150;
 static const unsigned int borderalpha = 150;
 /* static const unsigned int borderalpha = OPAQUE; */
 
-#include "/home/xmo/.cache/wal/colors-wal-dwm.h"
+#include "/home/mac/.cache/wal/colors-wal-dwm.h"
 /* static const char *colors[][3]      = { */
 /* 	/1*               fg         bg         border   *1/ */
 /* 	[SchemeNorm] = {  dra_cyan, dra_bg, dra_bg }, */
