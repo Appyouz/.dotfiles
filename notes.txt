@@ -2,3 +2,4 @@
 
 -> Python-pywal & xwallpaper
 -> Feh for xwallpaper
+-> xclip for copy to clipboard
