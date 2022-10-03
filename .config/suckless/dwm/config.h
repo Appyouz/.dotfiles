@@ -57,7 +57,7 @@ static const char *brupcmd[] = { "sudo", "xbacklight", "-inc", "10", NULL };
 static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "10", NULL };
 
 /* Screenshot using scrot */
-static const char *screenshot[] = { "scrot", "/home/xmo/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL };
+static const char *screenshot[] = { "scrot", "/home/mac/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL };
 
 static const char *pkill[] = {"pkill", "dwm", NULL};
 /* tagging */

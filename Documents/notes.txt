@@ -1,4 +1,4 @@
-#Dependencies
+# Dependencies
 
 -> Python-pywal & xwallpaper
 -> Feh for xwallpaper
@@ -7,3 +7,4 @@
 -> picom
 -> polkit
 -> pywalfox
+-> scrot for screenshot
