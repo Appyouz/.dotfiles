@@ -5,3 +5,5 @@
 -> xclip for copy to clipboard
 -> npm 
 -> picom
+-> polkit
+-> pywalfox
