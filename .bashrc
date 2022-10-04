@@ -8,7 +8,11 @@ alias ls='ls --color=auto'
 alias nv='nvim'
 alias push='git push -u origin main'
 
- 
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+    tmux attach || tmux >/dev/null 2>&1
+fi
+
+
  PS1="\[\e[1;36m\]\[\033[31m\]\[\033[00m\]\n\w\[\e[1;33m\] \[\e[1;31m\] \[\e[1;32m\] \[\e[1;37m\] "
 
 # PS1="\[\e[1;36m\]\[\033[31m\]\[\033[00m\]\n\w\[\e[1;33m\] \[\e[1;31m\] \[\e[1;37m\] \e[32m\]\[\e[1;37m\] "
