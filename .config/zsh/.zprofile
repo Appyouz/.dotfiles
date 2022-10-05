@@ -1,0 +1,21 @@
+alias ls='ls --color=auto'
+alias nv='nvim'
+alias push='git push -u origin main'
+
+export EDITOR="nvim"
+export TERMINAL="st"
+export BROWSER="firefox"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+export XINITRC="$HOME/.xinitrc"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export PATH=$PATH:$HOME/.local/bin
+
+[[ -f ~/.config/zsh ]] && . ~/.config/zsh
+[ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 ] && exec startx
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi
