@@ -36,12 +36,14 @@ zstyle ':vcs_info:*' enable git
 
 # Randomize symbols
 declare -a PROMPTS
-PROMPTS=("" "" "" "ﯙ " "勇" "")
+PROMPTS=(" " " " " " "ﯙ " "勇" " ")
 index=$(($RANDOM % ${#PROMPTS[@]} + 1))
 ignition=${PROMPTS[index]}
-PROMPT='%F{blue}%1~%f %F{cyan}${ignition}%f  '
+# PROMPT='%F{blue}%1~%f %F{cyan}${ignition}%f  '
 
-
+NEWLINE=$'\n'
+PROMPT='${NEWLINE}%F{blue}%1~%f %F{cyan}${ignition}%f  '
+# PROMPT="Line1${NEWLINE}LINE2"
 
 
 

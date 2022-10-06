@@ -1,0 +1,9 @@
+[START][2022-10-06 21:52:07] LSP logging initiated
+[WARN][2022-10-06 21:52:07] .../lua/vim/lsp.lua:1072	"server_request: no handler found for"	"workspace/diagnostic/refresh"
+[WARN][2022-10-06 21:52:07] .../lua/vim/lsp.lua:1072	"server_request: no handler found for"	"workspace/diagnostic/refresh"
+[START][2022-10-06 21:52:48] LSP logging initiated
+[ERROR][2022-10-06 21:52:48] .../vim/lsp/rpc.lua:733	"rpc"	"clangd"	"stderr"	"I[21:52:48.532] clangd version 15.0.1 (https://github.com/llvm/llvm-project b73d2c8c720a8c8e6e73b11be4e27afa6cb75bdf)\nI[21:52:48.532] Features: linux+grpc\nI[21:52:48.532] PID: 22850\nI[21:52:48.532] Working directory: /home/mac/.dotfiles\nI[21:52:48.532] argv[0]: clangd\nI[21:52:48.532] Starting LSP over stdin/stdout\nI[21:52:48.533] <-- initialize(1)\nI[21:52:48.533] --> reply:initialize(1) 0 ms\n"
+[ERROR][2022-10-06 21:52:48] .../vim/lsp/rpc.lua:733	"rpc"	"clangd"	"stderr"	"I[21:52:48.583] <-- initialized\nI[21:52:48.583] <-- textDocument/didOpen\n"
+[ERROR][2022-10-06 21:52:48] .../vim/lsp/rpc.lua:733	"rpc"	"clangd"	"stderr"	"I[21:52:48.585] Failed to find compilation database for /home/mac/.dotfiles/.config/nvim/lua/user/test.cpp\nI[21:52:48.585] ASTWorker building file /home/mac/.dotfiles/.config/nvim/lua/user/test.cpp version 0 with command clangd fallback\n[/home/mac/.dotfiles/.config/nvim/lua/user]\n/usr/bin/clang -resource-dir=/home/mac/.dotfiles/.local/share/nvim/mason/packages/clangd/clangd/lib/clang/15.0.1 -- /home/mac/.dotfiles/.config/nvim/lua/user/test.cpp\n"
+[ERROR][2022-10-06 21:52:48] .../vim/lsp/rpc.lua:733	"rpc"	"clangd"	"stderr"	"I[21:52:48.642] --> textDocument/publishDiagnostics\n"
+[ERROR][2022-10-06 21:52:50] .../vim/lsp/rpc.lua:733	"rpc"	"clangd"	"stderr"	"I[21:52:50.365] <-- shutdown(2)\nI[21:52:50.365] --> reply:shutdown(2) 0 ms\n"
