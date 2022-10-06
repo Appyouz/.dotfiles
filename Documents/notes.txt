@@ -9,3 +9,6 @@
 -> polkit
 -> pywalfox
 -> scrot for screenshot
+-> chsh for changing shell
+-> pipewire
+-> useChrom.css for firefox
