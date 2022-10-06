@@ -15,9 +15,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 export XINITRC="$HOME/.xinitrc"
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
- # export PATH=$PATH:$HOME/.local/bin
-export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+export PATH=$PATH:$HOME/.local/bin
 
 [[ -f ~/.config/zsh ]] && . ~/.config/zsh
 [ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 ] && exec startx
