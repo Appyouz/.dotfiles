@@ -43,3 +43,10 @@ main_window_color = "default"
 centered_cursor = "yes"
 enable_window_title = "yes"
 external_editor = "nvim"
+
+audio_output {
+       type	"fifo"
+       name	"Visualizer feed"
+       path	"/tmp/mpd.fifo"
+       format	"44100:16:2"
+}

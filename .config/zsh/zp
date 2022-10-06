@@ -1,10 +1,10 @@
-
 alias ls='ls --color=auto'
 alias nv='nvim'
 alias push='git push -u origin main'
-alias lf='lf-ueberzug'
+# alias lf='lf-ueberzug'
 
-# PATH="$HOME/.local/bin${PATH:+:${PATH}}"
+PATH="$HOME/.local/bin${PATH:+:${PATH}}"
+export PATH="$HOME/.dotfiles.local/bin/:$PATH"
 
 export EDITOR="nvim"
 export TERMINAL="st"
@@ -16,8 +16,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export XINITRC="$HOME/.xinitrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
- # export PATH=$PATH:$HOME/.local/bin
-export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+export PATH=$PATH:$HOME/.local/bin
 
 [[ -f ~/.config/zsh ]] && . ~/.config/zsh
 [ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 ] && exec startx
