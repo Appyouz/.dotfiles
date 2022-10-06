@@ -4,3 +4,4 @@ sticker.sql
 playlists/
 error.log
 .local/share/
+.local/state/
