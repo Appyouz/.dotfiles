@@ -8,10 +8,6 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 10;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
-
-// static const char *fonts[]          = { "monospace:size=10" };
-// static const char dmenufont[]       = "monospace:size=10";
-//
 static const char *fonts[]          = { "OpenDyslexic Nerd Font:size=10:style:bold" };
 static const char dmenufont[]       = " Hack Nerd Font:size=12";
 static const char col_gray1[]       = "#222222";
@@ -38,9 +34,10 @@ static const unsigned int alphas[][3]      = {
 };
 
 #include <X11/XF86keysym.h>
-static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
-static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
-static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
+static const char *mutecmd[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *volupcmd[] = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
+static const char *voldowncmd[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
+// static const char *miccmd[] = { "amixer", "set", "Capture", "toggle", NULL };
 
 static const char *brupcmd[] = { "sudo", "xbacklight", "-inc", "10", NULL };
 static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "10", NULL };
@@ -60,7 +57,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
 };
 
 /* layout(s) */

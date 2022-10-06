@@ -1,0 +1,1 @@
+{"secondary_sources":[],"schema_version":"1.0","primary_source":{"type":"npm","package":"@tailwindcss\/language-server"},"name":"tailwindcss-language-server","links":{"bin":{"tailwindcss-language-server":"node_modules\/.bin\/tailwindcss-language-server"}},"metrics":{"completion_time":1665070508881,"start_time":1665070505662}}

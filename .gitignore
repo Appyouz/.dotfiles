@@ -3,3 +3,4 @@ database
 sticker.sql
 playlists/
 error.log
+.local/share/

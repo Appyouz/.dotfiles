@@ -1,0 +1,13 @@
+[INFO  Thu Oct  6 21:19:49 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:110: Executing installer for Package(name=lua-language-server)
+[INFO  Thu Oct  6 21:19:49 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:110: Executing installer for Package(name=tailwindcss-language-server)
+[ERROR Thu Oct  6 21:19:52 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:146: Installation failed for Package(name=lua-language-server) error=spawn: unzip failed with exit code - and signal -. unzip is not executable
+[INFO  Thu Oct  6 21:20:02 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:110: Executing installer for Package(name=lua-language-server)
+[INFO  Thu Oct  6 21:20:02 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:110: Executing installer for Package(name=tailwindcss-language-server)
+[INFO  Thu Oct  6 21:20:05 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:110: Executing installer for Package(name=lua-language-server)
+[INFO  Thu Oct  6 21:20:05 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:110: Executing installer for Package(name=tailwindcss-language-server)
+[INFO  Thu Oct  6 21:20:08 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:142: Installation succeeded for Package(name=tailwindcss-language-server)
+[ERROR Thu Oct  6 21:20:11 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:146: Installation failed for Package(name=lua-language-server) error=spawn: unzip failed with exit code - and signal -. unzip is not executable
+[INFO  Thu Oct  6 21:20:33 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:110: Executing installer for Package(name=lua-language-server)
+[ERROR Thu Oct  6 21:20:38 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:146: Installation failed for Package(name=lua-language-server) error=spawn: unzip failed with exit code - and signal -. unzip is not executable
+[INFO  Thu Oct  6 21:22:14 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:110: Executing installer for Package(name=lua-language-server)
+[ERROR Thu Oct  6 21:22:19 2022] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:146: Installation failed for Package(name=lua-language-server) error=spawn: unzip failed with exit code - and signal -. unzip is not executable
