@@ -1,0 +1,9 @@
+
+vi and (,',",[,{,<  -> to highlight words inside any of the mentioned
+o -> moves cursor below the line on insert mode
+O -> vice versa of 'o'
+I -> Go to the beginning of the line
+A -> Go to the end of the line
+/ -> to search , n -> for next , N -> for previous
+* -> to jump over next occurence of the current word(where cursor is placed)
+# -> vice versa of '*'

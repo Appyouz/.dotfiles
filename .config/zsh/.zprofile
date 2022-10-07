@@ -3,7 +3,13 @@ alias nv='nvim'
 alias push='git push -u origin main'
 alias lf='lf-ueberzug'
 
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias lf='lf-ueberzug'
 # PATH="$HOME/.local/bin${PATH:+:${PATH}}"
+
+export TERM="xterm-256color"                      # getting proper colors
 
 export EDITOR="nvim"
 export TERMINAL="st"

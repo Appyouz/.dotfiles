@@ -15,10 +15,10 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const unsigned int baralpha = 150;
-static const unsigned int borderalpha = 150;
-// static const unsigned int baralpha = 0xd0;
-// static const unsigned int borderalpha = OPAQUE;
+// static const unsigned int baralpha = 150;
+// static const unsigned int borderalpha = 150;
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 //  
 #include "/home/mac/.cache/wal/colors-wal-dwm.h"
 // static const char *colors[][3]      = {
@@ -58,6 +58,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "cava",     NULL,       NULL,       1 << 7,       0,           -1 },
 	{ "subl",     NULL,       NULL,       1 << 1,       0,           -1 },
 };
 

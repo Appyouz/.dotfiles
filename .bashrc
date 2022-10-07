@@ -7,6 +7,9 @@
 alias ls='ls --color=auto'
 alias nv='nvim'
 alias push='git push -u origin main'
+alias lf='lf-ueberzug'
+alias sx='sxiv -t .'
+alias cava='pulseaudio; cava'
 #
 # if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
 #     tmux attach || tmux >/dev/null 2>&1

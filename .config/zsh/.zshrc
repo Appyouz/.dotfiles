@@ -1,7 +1,6 @@
 # Created by newuser for 5.9
 
 source ~/.config/zsh/.zprofile
-
 # alias nv="nvim"
 # Luke's config for the Zoomer Shell
 
@@ -42,7 +41,8 @@ ignition=${PROMPTS[index]}
 # PROMPT='%F{blue}%1~%f %F{cyan}${ignition}%f  '
 
 NEWLINE=$'\n'
-PROMPT='${NEWLINE}%F{blue}%1~%f %F{cyan}${ignition}%f  '
+# PROMPT='${NEWLINE}%F{blue}%1~%f %F{cyan}${ignition}%f  '
+PROMPT='${NEWLINE}%F{blue}%1~%f %F{magenta}${ignition}%f %F{gray} '
 # PROMPT="Line1${NEWLINE}LINE2"
 
 
