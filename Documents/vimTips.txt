@@ -7,3 +7,19 @@ A -> Go to the end of the line
 / -> to search , n -> for next , N -> for previous
 * -> to jump over next occurence of the current word(where cursor is placed)
 # -> vice versa of '*'
+f/F(opposite of f) -> will jumps on to the mentioned char (eg:- fa will take you to a)
+t/T(opposite of t) -> will jumps up to the mentioned char but not on it (eg:- fa will you to the char before a)
+; -> after using  f and t it acts as next button
+, -> after using  f and t it acts as previous button
+cw -> same as delete word but puts into insert mode
+
+### t & f can be combined with v,d,y ###
+The brown lazy fox jump over the wall
+eg:- vfb will highlight upto "The b"
+     vtb will highlight upto "The "
+     dfb will delete upto b of brown
+     dtb will delete upto the space before brown
+
+% -> to move from one braces to another
+(Note:- doesn't work on quoatation mark)
+ di -> to delete everything inside a curly brace

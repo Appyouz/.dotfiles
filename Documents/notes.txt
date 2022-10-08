@@ -12,3 +12,4 @@
 -> chsh for changing shell
 -> pipewire
 -> useChrom.css for firefox
+-> xorg-xbacklight
