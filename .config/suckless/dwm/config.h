@@ -33,19 +33,6 @@ static const unsigned int alphas[][3]      = {
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
-#include <X11/XF86keysym.h>
- static const char *mutecmd[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
- static const char *volupcmd[] = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
- static const char *voldowncmd[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
- // static const char *miccmd[] = { "amixer", "set", "Capture", "toggle", NULL };
-
-// static const char *volupcmd[] = {"pamixer", "-i", "5", "--allow-boost", NULL};
-// static const char *voldowncmd[] = {"pamixer", "-d", "5", "--allow-boost", NULL};
-// static const char *mutecmd[] = {"pamixer", "-t", NULL};
-//
-// static const char *brupcmd[] = { "sudo", "xbacklight", "-inc", "10", NULL };
-// static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "10", NULL };
-
 /* Screenshot using scrot */
 static const char *screenshot[] = { "scrot", "/home/mac/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL };
 
@@ -137,12 +124,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY,                       XK_q,      spawn,          {.v = pkill} },
 	
-  { 0, XF86XK_AudioMute,          spawn, {.v = mutecmd } },
-	{ 0, XF86XK_AudioLowerVolume,   spawn, {.v = voldowncmd } },
-	{ 0, XF86XK_AudioRaiseVolume,   spawn, {.v = volupcmd } },
-  // { 0, XF86XK_MonBrightnessUp,    spawn, {.v = brupcmd} },
-  // { 0, XF86XK_MonBrightnessDown,  spawn, {.v = brdowncmd} },
-
   { 0, XK_Print,                  spawn, {.v = screenshot } },
 };
 

@@ -5,4 +5,5 @@ playlists/
 error.log
 .local/share/
 .local/share/nvim
+.local/share/nvim/
 .local/state/nvim
