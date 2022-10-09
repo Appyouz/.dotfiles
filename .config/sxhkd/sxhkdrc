@@ -1,0 +1,35 @@
+#
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+
+# printscreen
+@Print
+	screenshot
+
+shift + @Print
+	screenshot select
+
+control + @Print
+	screenshot window
+
+# brightness keys
+XF86MonBrightnessUp
+	brightness up
+
+XF86MonBrightnessDown
+	brightness down
+
+# volume keys
+XF86AudioRaiseVolume
+	changevolume up
+
+XF86AudioLowerVolume
+	changevolume down
+
+XF86AudioMute
+	changevolume mute
+
+
