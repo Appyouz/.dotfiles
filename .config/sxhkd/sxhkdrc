@@ -4,6 +4,9 @@
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# Kill dwm
+super + q
+  pkill dwm
 
 # printscreen
 @Print
