@@ -61,7 +61,7 @@ return packer.startup(function(use)
   requires = {
     'kyazdani42/nvim-web-devicons', -- optional, for file icons
   },
-  tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    commit = "0f0f858348aacc94f98ba32880760c5a5440b825"
 }
 
   use {
