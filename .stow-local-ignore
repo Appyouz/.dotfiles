@@ -20,4 +20,5 @@ _darcs
 ^/COPYING
 
 notes.txt
-.local/share/
+.local/share/nvim/
+share/
