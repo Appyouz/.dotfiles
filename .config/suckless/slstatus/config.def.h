@@ -89,6 +89,6 @@ static const struct arg args[] = {
 //	{ run_command,	" %s ", "updates.sh " },
 	//{ run_command,	" %s ", "vol.sh " },
   { datetime,         "  %s ",        "%a, %d/%m/%y" },
-  { datetime,         "  %s ",        "%I:%M%p" },
+  { datetime,         "  %s ",        "%I:%M%p " },
 
 };
