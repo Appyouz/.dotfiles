@@ -18,7 +18,6 @@ header_window_color = "default"
 playlist_shorten_total_times = "yes"
 volume_color = "default"
 state_line_color = "black"
-/* state_line_color = "black" */
 
 [playlist]
 playlist_display_mode = "classic"
@@ -29,7 +28,7 @@ now_playing_suffix = "$/b$9"
 [statusbar]
 progressbar_look = "─╼ "
 progressbar_color = "black"
-statusbar_visibility = "no"
+statusbar_visibility = "yes"
 statusbar_color = "default"
 song_status_format = "{{%a{ - %t}}|{ - %f}{ - %b{ (%y)}}}"
 

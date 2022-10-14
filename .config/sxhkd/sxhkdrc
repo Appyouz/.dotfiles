@@ -8,6 +8,10 @@ super + Escape
 super + q
   pkill dwm
 
+# Lock screen 
+super + x 
+ betterlockscreen -l
+
 # printscreen
 @Print
 	screenshot

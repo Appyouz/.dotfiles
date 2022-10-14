@@ -90,6 +90,11 @@ nvim_lsp.sumneko_lua.setup {
 nvim_lsp.clangd.setup {
   capabilities = capabilities
 }
+
+nvim_lsp.cssls.setup {
+  capabilities = capabilities
+}
+
 nvim_lsp.tailwindcss.setup {}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
