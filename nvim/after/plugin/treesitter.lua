@@ -3,18 +3,11 @@ if not status_ok then
 	return
 end
 
-
-
 configs.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "c", "lua", "typescript", "javascript" },
-
-  -- Install parsers synchronously (only applied to `ensure_installed`)
+  ensure_installed = "all",
   sync_install = false,
-
-  -- Automatically install missing parsers when entering buffer
   auto_install = true,
-
 
   highlight = {
     -- `false` will disable the whole extension
@@ -23,8 +16,9 @@ configs.setup {
     additional_vim_regex_highlighting = false,
   },
 
-	autopairs = {
+  autopairs = {
 		enable = true,
 	},
 	indent = { enable = true, disable = { "python", "css" } },
 }
+
