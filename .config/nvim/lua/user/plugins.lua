@@ -53,7 +53,10 @@ return packer.startup(function(use)
 
   -- My themes here
   use "sainnhe/gruvbox-material"
-
+  use "EdenEast/nightfox.nvim" 
+  use "sainnhe/everforest"
+  use "gruvbox-community/gruvbox"
+  use 'navarasu/onedark.nvim'
 --  use "glepnir/lspsaga.nvim"
 
   use {
