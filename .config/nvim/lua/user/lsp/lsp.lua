@@ -28,6 +28,40 @@ local on_attach = function(client, bufnr)
   --vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+
+
+vim.api.nvim_create_autocmd("CursorHold", {
+  buffer = bufnr,
+  callback = function()
+    local opts = {
+      focusable = false,
+      close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+      border = 'rounded',
+      source = 'always',
+      prefix = ' ',
+      scope = 'cursor',
+    }
+    vim.diagnostic.open_float(nil, opts)
+  end
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
 
 
@@ -54,20 +88,17 @@ require('lspconfig')['sumneko_lua'].setup {
   on_attach = on_attach,
   flags = lsp_flags,
   root_dir = cwd,
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+    },
+  },
 }
 
 
-require('lspconfig')['clangd'].setup {
-  on_attach = on_attach,
-  flags = lsp_flags,
-  cmd = { "clangd" },
-  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-  --    root_dir =  root_files,
-  root_dir = cwd,
-  single_file_support = true,
-  --      commands = default capabilities, with offsetEncoding utf-8,
-  -- Server-specific settings...
-}
 
 require('lspconfig')['emmet_ls'].setup {
   on_attach = on_attach,
@@ -80,6 +111,18 @@ require('lspconfig')['html'].setup {
   capabilities = capabilities,
   root_dir = cwd,
 }
+
+
+
+local function lsp_highlight_document(client)
+	-- Set autocommands conditional on server_capabilities
+	local status_ok, illuminate = pcall(require, "illuminate")
+	if not status_ok then
+		return
+	end
+	illuminate.on_attach(client)
+	-- end
+end
 
 
 

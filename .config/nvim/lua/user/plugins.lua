@@ -44,7 +44,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use 'windwp/nvim-autopairs' -- An autopair
   use "nvim-lua/plenary.nvim"
-  use 'onsails/lspkind-nvim' -- vscode-like pictograms
+  -- use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'nvim-telescope/telescope.nvim' -- fzf file viewer
   use 'nvim-telescope/telescope-file-browser.nvim' -- file browser
@@ -52,13 +52,16 @@ return packer.startup(function(use)
   use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'norcalli/nvim-colorizer.lua' -- highlights the hexa value according to thier colors
   use 'akinsho/nvim-bufferline.lua' -- tabs
-  use "akinsho/toggleterm.nvim"     -- terminal
-  use 'nvim-lualine/lualine.nvim'   -- status line/bar
-  use 'lewis6991/gitsigns.nvim'     -- git signs for editing or any changes
-  use  'numToStr/Comment.nvim'      -- comment
+  use "akinsho/toggleterm.nvim" -- terminal
+  use 'nvim-lualine/lualine.nvim' -- status line/bar
+  use 'lewis6991/gitsigns.nvim' -- git signs for editing or any changes
+  use 'numToStr/Comment.nvim' -- comment
   use 'JoosepAlviste/nvim-ts-context-commentstring' -- jsx commenting
   use 'yamatsum/nvim-cursorline'
-
+  use 'p00f/clangd_extensions.nvim'
+  use 'RRethy/vim-illuminate'
+  use 'lewis6991/impatient.nvim'
+  use 'onsails/lspkind.nvim'
   -- Themes
   use 'navarasu/onedark.nvim'
   use 'folke/tokyonight.nvim'
@@ -66,16 +69,16 @@ return packer.startup(function(use)
   use "sainnhe/gruvbox-material"
 
 
-  -- Language servers and Auto complete 
+  -- Language servers and Auto complete
   use "neovim/nvim-lspconfig" --Lsp servers
   use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-buffer"    -- buffer completions
-  use "hrsh7th/cmp-path"      -- path completions
-  use "hrsh7th/cmp-cmdline"   -- cmdline completions
-  use "hrsh7th/nvim-cmp"      -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-nvim-lua"
-  
-  
+
+
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
@@ -90,23 +93,23 @@ return packer.startup(function(use)
   use { "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim"
   }
- 
+
   -- for syntax highlighting
   use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-    }
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
 
-  
+
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
     end
-})
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
