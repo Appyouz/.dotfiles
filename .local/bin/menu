@@ -6,7 +6,7 @@ case "$(echo -e "shutdown\nrestart\nlogout\nsuspend\nLock" | dmenu \
     # -nf "${COLOR_DEFAULT:-#aaaaaa}" \
     # -sf "${COLOR_HIGHLIGHT:-#589cc5}" \
     # -sb "#1a1a1a" \
-     # -b -i -p \
+     -b -i -p \
     "Power:" -l 5)" in
         shutdown) exec systemctl poweroff;;
         restart) exec systemctl reboot;;

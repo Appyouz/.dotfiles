@@ -44,7 +44,6 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use 'windwp/nvim-autopairs' -- An autopair
   use "nvim-lua/plenary.nvim"
-  -- use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'nvim-telescope/telescope.nvim' -- fzf file viewer
   use 'nvim-telescope/telescope-file-browser.nvim' -- file browser
@@ -58,7 +57,7 @@ return packer.startup(function(use)
   use 'numToStr/Comment.nvim' -- comment
   use 'JoosepAlviste/nvim-ts-context-commentstring' -- jsx commenting
   use 'yamatsum/nvim-cursorline'
-  use 'p00f/clangd_extensions.nvim'
+  -- use 'p00f/clangd_extensions.nvim'
   use 'RRethy/vim-illuminate'
   use 'lewis6991/impatient.nvim'
   use 'onsails/lspkind.nvim'
@@ -84,9 +83,6 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
-  -- For vsnip users.
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
 
 
   -- For installing language servers
@@ -105,9 +101,7 @@ return packer.startup(function(use)
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     config = function()
-      require("nvim-surround").setup({
-        -- Configuration here, or leave empty to use defaults
-      })
+      require("nvim-surround").setup({})
     end
   })
 

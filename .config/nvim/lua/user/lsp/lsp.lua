@@ -98,8 +98,15 @@ require('lspconfig')['sumneko_lua'].setup {
   },
 }
 
-
-
+  require('lspconfig')['clangd'].setup {
+      cmd = { "clangd" },
+      filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+      single_file_support = true,
+      on_attach = on_attach,
+      capabilities = capabilities,
+      root_dir = cwd,
+    }
+   
 require('lspconfig')['emmet_ls'].setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -112,6 +119,14 @@ require('lspconfig')['html'].setup {
   root_dir = cwd,
 }
 
+require('lspconfig')['marksman'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  root_dir = cwd,
+  cmd = { "marksman", "server" },
+  filetypes = { "markdown" },
+  single_file_support = true,
+}
 
 
 local function lsp_highlight_document(client)
