@@ -1,10 +1,9 @@
-#!/bin/bash -x
+#!/bin/bash
 
-INRES="1366x768"
-OUTRES="1280x720"
-FPS="30"
+VIDEO_SIZE=1366x768
+FRAME_RATE=40
+AUDIO_DEVICE=pulse
+PRESET=ultrafast
+FILE_TO_SAVE=$1
 
-ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i :0.0 -f alsa -ac 2 \
--i default -vcodec libx264 -s "$OUTRES" \
--acodec libmp3lame -ab 128k -ar 44100 \
--threads 0 -f mp4 $1
+ffmpeg -video_size $VIDEO_SIZE -framerate $FRAME_RATE -f x11grab -i $DISPLAY -f $AUDIO_DEVICE -i default -c:v libx264rgb -preset $PRESET -c:a aac $FILE_TO_SAVE

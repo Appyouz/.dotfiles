@@ -97,7 +97,7 @@ require('lspconfig')['sumneko_lua'].setup {
     },
   },
 }
-
+--[[ 
   require('lspconfig')['clangd'].setup {
       cmd = { "clangd" },
       filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
@@ -105,8 +105,7 @@ require('lspconfig')['sumneko_lua'].setup {
       on_attach = on_attach,
       capabilities = capabilities,
       root_dir = cwd,
-    }
-   
+    } ]]
 require('lspconfig')['emmet_ls'].setup {
   on_attach = on_attach,
   capabilities = capabilities,
