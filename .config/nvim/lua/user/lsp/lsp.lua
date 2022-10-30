@@ -86,17 +86,20 @@ require("lspconfig")["clangd"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	root_dir = cwd,
+	flags = lsp_flags,
 })
 require("lspconfig")["emmet_ls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	root_dir = cwd,
+	flags = lsp_flags,
 })
 
 require("lspconfig")["html"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	root_dir = cwd,
+	flags = lsp_flags,
 })
 
 require("lspconfig")["marksman"].setup({
@@ -106,6 +109,7 @@ require("lspconfig")["marksman"].setup({
 	cmd = { "marksman", "server" },
 	filetypes = { "markdown" },
 	single_file_support = true,
+	flags = lsp_flags,
 })
 
 local function lsp_highlight_document(client)

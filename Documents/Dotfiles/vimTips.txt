@@ -22,4 +22,4 @@ eg:- vfb will highlight upto "The b"
 
 % -> to move from one braces to another
 (Note:- doesn't work on quoatation mark)
- di -> to delete everything inside a curly brace
+ di{ or ( -> to delete everything inside a curly brace
