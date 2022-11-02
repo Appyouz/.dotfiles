@@ -1,0 +1,22 @@
+#!/bin/sh
+ 
+ shutdown=" shutdown"
+ suspend="⏾ suspend"
+ reboot=" reboot"
+ logout=" logout"
+ lock=" lock"
+ cancel=" cancel"
+case "$(echo -e "\n$cancel\n$shutdown\n$reboot\n$suspend\n$logout\n$lock" | dmenu \
+    # -nb "${COLOR_BACKGROUND:-#151515}" \
+    # -nf "${COLOR_DEFAULT:-#aaaaaa}" \
+    # -sf "${COLOR_HIGHLIGHT:-#589cc5}" \
+    # -sb "#1a1a1a" \
+    #  -b -i -p \
+    "Power:" -l 6)" in
+       $cancel) exit;;
+       $shutdown) exec systemctl poweroff;;
+       $reboot) exec systemctl reboot;;
+       $logout) kill -HUP $XDG_SESSION_PID;;
+       $suspend) exec systemctl suspend;;
+       $lock) exec systemctl --user start lock.target;;
+esac
