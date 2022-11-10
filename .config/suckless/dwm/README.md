@@ -1,2 +1,0 @@
-# suckless-dwm
-# suckless-dwm

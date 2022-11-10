@@ -87,6 +87,7 @@ require("lspconfig")["clangd"].setup({
 	capabilities = capabilities,
 	root_dir = cwd,
 	flags = lsp_flags,
+  -- init_option = { fallbackFlags = {  "-std=c++2a"  } }
 })
 require("lspconfig")["emmet_ls"].setup({
 	on_attach = on_attach,

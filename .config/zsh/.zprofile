@@ -7,8 +7,16 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias lf='lf-ueberzug'
+alias spd='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3'
+
+
+
+
+
+EDITOR=neovim
 # PATH="$HOME/.local/bin${PATH:+:${PATH}}"
 
+export CC=gcc-11 CXX=g++-11
 export TERM="xterm-256color"                      # getting proper colors
 
 export EDITOR="nvim"

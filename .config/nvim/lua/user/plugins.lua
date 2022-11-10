@@ -66,7 +66,7 @@ return packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'morhetz/gruvbox'
   use "sainnhe/gruvbox-material"
-
+  use 'tanvirtin/monokai.nvim'
 
   -- Language servers and Auto complete
   use "neovim/nvim-lspconfig" --Lsp servers

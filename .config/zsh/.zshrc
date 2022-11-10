@@ -45,6 +45,33 @@ NEWLINE=$'\n'
 PROMPT='${NEWLINE}%F{blue}%1~%f %F{magenta}${ignition}%f %F{gray} '
 # PROMPT="Line1${NEWLINE}LINE2"
 
+local PR_USER PR_USER_OP PR_PROMPT PR_HOST
+
+# Check the UID
+if [[ $UID -ne 0 ]]; then # normal user
+  PR_USER='%F{green}%n%f'
+  PR_USER_OP='%F{green}%#%f'
+  PR_PROMPT='%F{blue}%f%F{magenta}${ignition}%f%F{gray}'
+else # root
+  PR_USER='%F{red}%n%f'
+  PR_USER_OP='%F{red}%#%f'
+  PR_PROMPT='%F{blue}%f%F{magenta}${ignition}%f%F{gray}'
+fi
+
+# Check if we are on SSH or not
+if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then
+  PR_HOST='%F{red}%M%f' # SSH
+else
+  PR_HOST='%F{green}%M%f' # no SSH
+fi
+
+local user_host="${PR_USER}%F{cyan}@${PR_HOST}"
+local current_dir="%F{blue}%1~%f"
+
+PROMPT="${NEWLINE}╭──${user_host} ${current_dir} 
+╰─$PR_PROMPT "
+
+
 
 
 # vi mode
