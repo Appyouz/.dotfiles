@@ -8,7 +8,7 @@ echo "Generating wallpaper"
 wal -i $wall >/dev/null 
 sed -i 'N;$!P;D' $HOME/.cache/wal/colors-wal-dwm.h
 echo "Recompiling dwm..."
-(cd $HOME/.config/suckless/dwm && sudo make clean install>/dev/null) &
-(cd $HOME/.config/suckless/dmenu && sudo make clean install>/dev/null) &
-(cd $HOME/.config/suckless/st && sudo make clean install>/dev/null)
+(cd $HOME/.local/src/suckless/dwm && sudo make clean install>/dev/null) &
+(cd $HOME/.local/src/suckless/dmenu && sudo make clean install>/dev/null) &
+(cd $HOME/.local/src/suckless/st && sudo make clean install>/dev/null)
 echo "Restart dwm for the new look"
