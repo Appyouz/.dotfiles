@@ -7,3 +7,4 @@ error.log
 .local/share/nvim
 .local/share/nvim/
 .local/state/nvim
+/.zcompdump
