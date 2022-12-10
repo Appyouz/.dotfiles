@@ -13,3 +13,5 @@
 -> pipewire
 -> useChrom.css for firefox
 -> xorg-xbacklight
+-> pamixer and pulseaudio for 'changevolume script'
+-> backlight.rules for brillo
