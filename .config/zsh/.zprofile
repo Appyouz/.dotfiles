@@ -13,10 +13,9 @@ alias spd='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/
 
 
 
-EDITOR=neovim
 # PATH="$HOME/.local/bin${PATH:+:${PATH}}"
 
-export CC=gcc-11 CXX=g++-11
+# export CC=gcc-11 CXX=g++-11
 export TERM="xterm-256color"                      # getting proper colors
 
 export EDITOR="nvim"
