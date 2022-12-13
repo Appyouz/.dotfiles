@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Choosing  wallpaper..."
-wall=$(find $HOME/Pictures/Wallpapers/maller/ -type f | shuf -n 1)
+wall=$(find $HOME/pictures/wallpapers/maller/ -type f | shuf -n 1)
 echo "Setting up wallpaper"
 xwallpaper --zoom $wall
 echo "Generating wallpaper"
