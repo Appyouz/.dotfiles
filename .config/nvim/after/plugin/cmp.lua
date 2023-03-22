@@ -116,9 +116,9 @@ cmp.setup({
 	},
 
 	sources = cmp.config.sources({
-		{ name = "nvim_lsp" },
-		{ name = "vsnip" }, -- For vsnip users.
 		{ name = "luasnip" }, -- For luasnip users.
+		{ name = "nvim_lsp" },
+		-- { name = "vsnip" }, -- For vsnip users.
 		{ name = "buffer" },
 		{ name = "path" },
 		-- { name = 'ultisnips' }, -- For ultisnips users.
@@ -135,8 +135,6 @@ cmp.setup({
     experimental = {
     ghost_text = true,
   },
-  
-
 })
 
 -- Set configuration for specific filetype.

@@ -113,7 +113,13 @@ use {
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
 }
-use "ahmedkhalf/project.nvim"
+  use "ahmedkhalf/project.nvim"
+    use "mfussenegger/nvim-dap"
+use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+
+  -- use "p00f/clangd_extensions.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
