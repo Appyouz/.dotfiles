@@ -45,6 +45,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     iscentered   isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,       0,           0,           -1 },
+	{ "Chromium",  NULL,       NULL,      1 << 2,       0,           0,           -1 },
 };
 
 /* layout(s) */

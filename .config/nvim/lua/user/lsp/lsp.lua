@@ -113,6 +113,14 @@ require("lspconfig")["marksman"].setup({
 	flags = lsp_flags,
 })
 
+require("lspconfig")[ "cmake" ].setup{
+  cmd = { "cmake-language-server" },
+  filetypes = { "cmake" },
+  init_option = {buildDirectory = "build"},
+  -- root_dir = root_pattern('CMakePresets.json', 'CTestConfig.cmake', '.git', 'build', 'cmake'),
+  root_dir = cwd,
+  single_file_support = true
+}
 local function lsp_highlight_document(client)
 	-- Set autocommands conditional on server_capabilities
 	local status_ok, illuminate = pcall(require, "illuminate")
