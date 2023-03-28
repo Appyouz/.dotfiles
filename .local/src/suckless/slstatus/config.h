@@ -86,8 +86,9 @@ static const struct arg args[] = {
     { disk_free,          " %s " ,                  "/"      },
     { disk_total,         "/%s " ,                  "/"      },
     { wifi_essid,       "  %s ",           "wlp6s0" },
-//	{ run_command,	" %s ", "updates.sh " },
+  //	{ run_command,	" %s ", "updates.sh " },
 	//{ run_command,	" %s ", "vol.sh " },
+  { run_command,	" %s ", "battery" },
   { datetime,         "  %s ",        "%a, %d/%m/%y" },
   { datetime,         "  %s ",        "%I:%M%p " },
 
