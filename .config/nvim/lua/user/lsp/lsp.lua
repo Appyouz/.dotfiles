@@ -16,6 +16,7 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
 	local bufopts = { noremap = true, silent = true, buffer = bufnr }
+  -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
 	vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
@@ -87,7 +88,7 @@ require("lspconfig")["clangd"].setup({
 	capabilities = capabilities,
 	root_dir = cwd,
 	flags = lsp_flags,
-  -- init_option = { fallbackFlags = {  "-std=c++2a"  } }
+	-- init_option = { fallbackFlags = {  "-std=c++2a"  } }
 })
 require("lspconfig")["emmet_ls"].setup({
 	on_attach = on_attach,
@@ -113,13 +114,13 @@ require("lspconfig")["marksman"].setup({
 	flags = lsp_flags,
 })
 
-require("lspconfig")[ "cmake" ].setup{
-  cmd = { "cmake-language-server" },
-  filetypes = { "cmake" },
-  init_option = {buildDirectory = "build"},
-  -- root_dir = root_pattern('CMakePresets.json', 'CTestConfig.cmake', '.git', 'build', 'cmake'),
-  root_dir = cwd,
-  single_file_support = true
+require("lspconfig")["cmake"].setup {
+	cmd = { "cmake-language-server" },
+	filetypes = { "cmake" },
+	init_option = { buildDirectory = "build" },
+	-- root_dir = root_pattern('CMakePresets.json', 'CTestConfig.cmake', '.git', 'build', 'cmake'),
+	root_dir = cwd,
+	single_file_support = true
 }
 local function lsp_highlight_document(client)
 	-- Set autocommands conditional on server_capabilities
