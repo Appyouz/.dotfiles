@@ -41,9 +41,9 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
+  use 'wbthomason/packer.nvim' -- Have packer manage itself
   use 'windwp/nvim-autopairs' -- An autopair
-  use "nvim-lua/plenary.nvim"
+  use 'nvim-lua/plenary.nvim'
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'nvim-telescope/telescope.nvim' -- fzf file viewer
   use 'nvim-telescope/telescope-file-browser.nvim' -- file browser
@@ -51,7 +51,7 @@ return packer.startup(function(use)
   use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'norcalli/nvim-colorizer.lua' -- highlights the hexa value according to thier colors
   use 'akinsho/nvim-bufferline.lua' -- tabs
-  use "akinsho/toggleterm.nvim" -- terminal
+  use 'akinsho/toggleterm.nvim' -- terminal
   use 'nvim-lualine/lualine.nvim' -- status line/bar
   use 'lewis6991/gitsigns.nvim' -- git signs for editing or any changes
   use 'numToStr/Comment.nvim' -- comment
@@ -59,65 +59,62 @@ return packer.startup(function(use)
   use 'yamatsum/nvim-cursorline'
   use 'lukas-reineke/indent-blankline.nvim'
 
-  -- use 'p00f/clangd_extensions.nvim'
   use 'RRethy/vim-illuminate'
   use 'lewis6991/impatient.nvim'
   use 'onsails/lspkind.nvim'
-  -- Themes
+
+	-- Themes
   use 'navarasu/onedark.nvim'
   use 'folke/tokyonight.nvim'
   use 'morhetz/gruvbox'
   use "sainnhe/gruvbox-material"
   use 'tanvirtin/monokai.nvim'
 
-  -- Language servers and Auto complete
-  use "neovim/nvim-lspconfig" --Lsp servers
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-nvim-lua"
+  -- Language servers 
+  use {'williamboman/mason.nvim',
+       'williamboman/mason-lspconfig.nvim',
+       'neovim/nvim-lspconfig',
+  }
+
+-- Auto complete
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer' -- buffer completions
+  use 'hrsh7th/cmp-path' -- path completions
+  use 'hrsh7th/cmp-cmdline' -- cmdline completions
+  use 'hrsh7th/nvim-cmp' -- The completion plugin
+  use 'hrsh7th/cmp-nvim-lua'
 
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-
-
-
-  -- For installing language servers
-  use { "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim"
-  }
+  use 'L3MON4D3/LuaSnip' --snippet engine
+  use 'saadparwaiz1/cmp_luasnip' -- snippet completions
+  use 'rafamadriz/friendly-snippets' -- a bunch of snippets to use
 
   -- for syntax highlighting
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
+  use {'nvim-treesitter/nvim-treesitter',
+				run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+	}
 
-
-  use({
-    "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-    config = function()
+  use({'kylechui/nvim-surround',
+			tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+			config = function()
       require("nvim-surround").setup({})
-    end
+			end
   })
 
-use {
-    'goolord/alpha-nvim',
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
-}
-  use "ahmedkhalf/project.nvim"
-    use "mfussenegger/nvim-dap"
-use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+	use{'goolord/alpha-nvim',
+			config = function ()
+      require'alpha'.setup(require'alpha.themes.dashboard'.config)
+			end
+	}
+  
+	use 'ahmedkhalf/project.nvim'
+  use 'mfussenegger/nvim-dap'
+	use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
-
+  use 'dinhhuy258/git.nvim' -- For git blame & browse
+	use 'folke/lsp-colors.nvim'
+	use 'folke/zen-mode.nvim'
   -- use "p00f/clangd_extensions.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
