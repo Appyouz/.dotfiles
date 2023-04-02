@@ -109,12 +109,10 @@ return packer.startup(function(use)
 	}
   
 	use 'ahmedkhalf/project.nvim'
-  use 'mfussenegger/nvim-dap'
-	use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 	use 'folke/lsp-colors.nvim'
 	use 'folke/zen-mode.nvim'
+
   -- use "p00f/clangd_extensions.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
