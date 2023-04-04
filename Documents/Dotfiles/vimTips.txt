@@ -23,3 +23,22 @@ eg:- vfb will highlight upto "The b"
 % -> to move from one braces to another
 (Note:- doesn't work on quoatation mark)
  di{ or ( -> to delete everything inside a curly brace
+
+## Editing in vim
+
+vi => select everthing inside the curly  braces
+va => includes curly braces too
+vi<smthng>/va<smthg> works too (eg: vi() and va<hi>)
+:%s/target/new-text/g -> 'g' changes all the target to new-text
+:$s/target/new-text/&new/g -> adds new to the current target
+
+C -> deletes the the line from current position till the end 
+eg:- helloWorld(int x); {if starting position is o it deletes
+everything from o to ;}
+cc -> deletes the whole line even if the cursor is in the middle of line
+ci{} -> changes everything inside the curly braces
+ctrl-w -> deletes the words during insert mode
+yiw{ -> copies everything inside curly braces
+
+
+

@@ -60,6 +60,7 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-keymap('n', '<C-a>', 'gg<S-v>G',opts)
+keymap('n', "<C-a>", 'gg<S-v>G',opts)
 --nnoremap <esc><esc> :silent! nohls<cr>
 keymap("n", "<esc><esc>", ":nohlsearch<CR>", { silent = true })
+keymap('n', '<F8>', ":TagbarToggle<CR>", { noremap = true, silent = true })
