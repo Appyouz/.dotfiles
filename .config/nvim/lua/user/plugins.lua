@@ -113,6 +113,26 @@ return packer.startup(function(use)
 	use 'folke/lsp-colors.nvim'
 	use 'folke/zen-mode.nvim'
   use 'preservim/tagbar'
+use {
+    "nvim-neorg/neorg",
+    config = function()
+        require('neorg').setup {
+            load = {
+                ["core.defaults"] = {}, -- Loads default behaviour
+                ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+                ["core.norg.dirman"] = { -- Manages Neorg workspaces
+                    config = {
+                        workspaces = {
+                            notes = "~/notes",
+                        },
+                    },
+                },
+            },
+        }
+    end,
+    -- run = ":Neorg sync-parsers",
+    requires = "nvim-lua/plenary.nvim",
+}
   -- use "p00f/clangd_extensions.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim

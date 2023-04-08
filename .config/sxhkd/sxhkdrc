@@ -8,6 +8,10 @@ super + Escape
 super + q
   pkill dwm
 
+# xkill
+ctrl + alt + k
+  xkill
+
 # Lock screen 
 super + x 
  betterlockscreen -l
