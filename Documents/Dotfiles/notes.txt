@@ -15,3 +15,4 @@
 -> xorg-xbacklight
 -> pamixer and pulseaudio for 'changevolume script'
 -> backlight.rules for brillo
+-> tumbler [for tumbnails in thunar file manager]
