@@ -50,7 +50,7 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
 	use("glepnir/lspsaga.nvim") -- LSP UIs
 	use("norcalli/nvim-colorizer.lua") -- highlights the hexa value according to thier colors
-use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 	use("akinsho/toggleterm.nvim") -- terminal
 	use("nvim-lualine/lualine.nvim") -- status line/bar
 	use("lewis6991/gitsigns.nvim") -- git signs for editing or any changes
@@ -134,6 +134,39 @@ use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-dev
 		-- run = ":Neorg sync-parsers",
 		requires = "nvim-lua/plenary.nvim",
 	})
+	use("lervag/vimtex")
+	use({
+		"vimwiki/vimwiki",
+		config = function()
+			vim.g.vimwiki_list = {
+				{
+					path = "~/vimwiki",
+					syntax = "markdown",
+					ext = ".md",
+				},
+			}
+
+			vim.g.vimwiki_ext2syntax = {
+				[".md"] = "markdown",
+				[".markdown"] = "markdown",
+				[".mdown"] = "markdown",
+			}
+			vim.g.vimwiki_global_ext = 0 -- don't treat all md files as vimwiki
+		end,
+	})
+  -- Lua
+use {
+  "folke/which-key.nvim",
+  config = function()
+    vim.o.timeout = true
+    vim.o.timeoutlen = 300
+    require("which-key").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
 	-- use "p00f/clangd_extensions.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
