@@ -104,9 +104,9 @@ return packer.startup(function(use)
 
 	use({
 		"goolord/alpha-nvim",
-		config = function()
-			require("alpha").setup(require("alpha.themes.dashboard").config)
-		end,
+		-- config = function()
+		-- 	require("alpha").setup(require("alpha.themes.dashboard").config)
+		-- end,
 	})
 
 	use("ahmedkhalf/project.nvim")
@@ -114,26 +114,8 @@ return packer.startup(function(use)
 	use("folke/lsp-colors.nvim")
 	use("folke/zen-mode.nvim")
 	use("preservim/tagbar")
-	use({
-		"nvim-neorg/neorg",
-		config = function()
-			require("neorg").setup({
-				load = {
-					["core.defaults"] = {}, -- Loads default behaviour
-					["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-					["core.norg.dirman"] = { -- Manages Neorg workspaces
-						config = {
-							workspaces = {
-								notes = "~/notes",
-							},
-						},
-					},
-				},
-			})
-		end,
-		-- run = ":Neorg sync-parsers",
-		requires = "nvim-lua/plenary.nvim",
-	})
+	use("nvim-neorg/neorg")
+
 	use("lervag/vimtex")
 	use({
 		"vimwiki/vimwiki",
@@ -154,19 +136,14 @@ return packer.startup(function(use)
 			vim.g.vimwiki_global_ext = 0 -- don't treat all md files as vimwiki
 		end,
 	})
-  -- Lua
-use {
-  "folke/which-key.nvim",
-  config = function()
-    vim.o.timeout = true
-    vim.o.timeoutlen = 300
-    require("which-key").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
-}
+	-- Lua
+	use("folke/which-key.nvim")
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 	-- use "p00f/clangd_extensions.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
