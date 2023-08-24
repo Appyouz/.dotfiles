@@ -13,5 +13,6 @@ neorg.setup({
 				},
 			},
 		},
+		-- new modules added
 	},
 })
