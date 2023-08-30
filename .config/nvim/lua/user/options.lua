@@ -34,6 +34,7 @@ local options = {
   scrolloff = 10,
   sidescrolloff = 10,
   colorcolumn = "90",
+  foldlevel = 90,                          -- disable auto fodling on startup
 }
 
 vim.opt.shortmess:append "c"

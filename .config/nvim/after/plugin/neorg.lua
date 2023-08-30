@@ -10,6 +10,7 @@ neorg.setup({
 			config = {
 				workspaces = {
 					notes = "~/notes",
+          others = "~/notes/learning"
 				},
 			},
 		},
