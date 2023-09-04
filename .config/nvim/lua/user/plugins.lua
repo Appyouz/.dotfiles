@@ -117,7 +117,7 @@ return packer.startup(function(use)
 	use("nvim-neorg/neorg")
 
 	use("lervag/vimtex")
-	use({
+	--[[ use({
 		"vimwiki/vimwiki",
 		config = function()
 			vim.g.vimwiki_list = {
@@ -135,7 +135,7 @@ return packer.startup(function(use)
 			}
 			vim.g.vimwiki_global_ext = 0 -- don't treat all md files as vimwiki
 		end,
-	})
+	}) ]]
 	-- Lua
 	use("folke/which-key.nvim")
 	use({
