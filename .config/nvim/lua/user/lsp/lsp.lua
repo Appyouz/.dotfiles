@@ -96,7 +96,8 @@ require("lspconfig")["clangd"].setup({
 		"configure.ac",
 		".git"
 	),
-	-- init_option = { fallbackFlags = {  "-std=c++2a"  } }
+
+	init_option = { fallbackFlags = {  "-std=c++2a"  } }
 })
 require("lspconfig")["emmet_ls"].setup({
 	on_attach = on_attach,

@@ -145,6 +145,8 @@ return packer.startup(function(use)
 		end,
 	})
 use 'andweeb/presence.nvim'
+use 'sudar/vim-arduino-syntax'
+
 	-- use "p00f/clangd_extensions.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim

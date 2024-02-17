@@ -8,6 +8,7 @@ error.log
 .local/share/nvim/
 .local/state/nvim
 .zcompdump
+.config/nvim/plugin
 
 
 .config/gtk-3.0/bookmarks
