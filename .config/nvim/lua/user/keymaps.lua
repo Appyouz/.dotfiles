@@ -64,3 +64,6 @@ keymap('n', "<C-a>", 'gg<S-v>G',opts)
 --nnoremap <esc><esc> :silent! nohls<cr>
 keymap("n", "<esc><esc>", ":nohlsearch<CR>", { silent = true })
 keymap('n', '<F8>', ":TagbarToggle<CR>", { noremap = true, silent = true })
+
+keymap("n", "d", "\"ad", opts)
+keymap("v", "d", "\"ad", opts)

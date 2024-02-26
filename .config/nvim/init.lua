@@ -7,4 +7,3 @@ require("user.lsp.null-ls")
 require("user.lsp.lspsaga")
 require("user.lsp.mason")
 
-
