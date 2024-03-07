@@ -144,9 +144,9 @@ return packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-use 'andweeb/presence.nvim'
-use 'sudar/vim-arduino-syntax'
-
+	use("andweeb/presence.nvim")
+	use("sudar/vim-arduino-syntax")
+	use({ "folke/twilight.nvim" })
 	-- use "p00f/clangd_extensions.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
