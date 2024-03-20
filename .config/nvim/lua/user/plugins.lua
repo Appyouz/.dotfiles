@@ -116,7 +116,10 @@ return packer.startup(function(use)
 	use("preservim/tagbar")
 	use("nvim-neorg/neorg")
 
-	use("lervag/vimtex")
+
+	use({
+		"lervag/vimtex",
+	})
 	--[[ use({
 		"vimwiki/vimwiki",
 		config = function()
