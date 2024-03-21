@@ -1,14 +1,4 @@
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
-  return
-end
-
-local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
-  return
-end
-
-require("luasnip/loaders/from_vscode").lazy_load()
+local Plugin = {'hrsh7th/nvim-cmp'}
 
 local check_backspace = function()
   local col = vim.fn.col(".") - 1
@@ -42,11 +32,60 @@ local kind_icons = {
   Operator = "",
   TypeParameter = "",
 }
+Plugin.dependencies = {
+  -- Sources
+  {'hrsh7th/cmp-buffer'},
+  {'hrsh7th/cmp-path'},
+  {'saadparwaiz1/cmp_luasnip',
+config = function ()
+-- <TAB>
+local luasnip = require('luasnip')
 
+local unlinkgrp = vim.api.nvim_create_augroup(
+  'UnlinkSnippetOnModeChange',
+  { clear = true }
+)
+vim.api.nvim_create_autocmd("ModeChanged", {
+  group = vim.api.nvim_create_augroup("UnlinkLuaSnipSnippetOnModeChange", {
+    clear = true,
+  }),
+  pattern = { "s:n", "i:*" },
+  desc = "Forget the current snippet when leaving the insert mode",
+  callback = function(evt)
+    -- If we have n active nodes, n - 1 will still remain after a `unlink_current()` call.
+    -- We unlink all of them by wrapping the calls in a loop.
+    while true do
+      if luasnip.session and luasnip.session.current_nodes[evt.buf] and not luasnip.session.jump_active then
+        luasnip.unlink_current()
+      else
+        break
+      end
+    end
+  end,
+})
+end
 
+  },
+  {'hrsh7th/cmp-nvim-lsp'},
 
+  -- Snippets
+  {'L3MON4D3/LuaSnip'},
+  {'rafamadriz/friendly-snippets'},
+}
 
+Plugin.event = 'InsertEnter'
 
+function Plugin.config()
+  vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+
+  local cmp = require('cmp')
+  local luasnip = require('luasnip')
+
+  require('luasnip.loaders.from_vscode').lazy_load()
+
+  local select_opts = {behavior = cmp.SelectBehavior.Select}
+
+  -- See :help cmp-config
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
@@ -153,3 +192,5 @@ vim.cmd [[
   set completeopt=menuone,noinsert,noselect
   highlight! default link CmpItemKind CmpItemMenuDefault
 ]]
+ end
+return Plugin

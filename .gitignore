@@ -66,3 +66,5 @@ _deps
 .local/src/suckless/dmenu/stest
 
 .local/src/suckless/dmenu/stest
+.config/nvim/.luarc.json
+.config/nvim/lazy-lock.json

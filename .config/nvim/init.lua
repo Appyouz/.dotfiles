@@ -1,10 +1,12 @@
+local load = function(mod)
+  package.loaded[mod] = nil
+  require(mod)
+end
+
 require("user.options")
 require("user.keymaps")
-require("user.plugins")
-require("user.colorschemes")
-require("user.lsp.lsp")
-require("user.lsp.null-ls")
-require("user.lsp.lspsaga")
-require("user.lsp.mason")
+-- require("user.colorschemes")
 
-
+require('user.lazy')
+-- require("lazy").setup("plugins")
+vim.cmd.colorscheme "gruvbox-material"
