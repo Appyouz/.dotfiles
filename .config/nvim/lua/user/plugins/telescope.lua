@@ -1,5 +1,3 @@
-local telescope = pcall(require, "telescope")
-
 local function telescope_buffer_dir()
   return vim.fn.expand("%:p:h")
 end
@@ -54,14 +52,6 @@ return {
       end)
       vim.keymap.set("n", ";e", function()
         builtin.diagnostics()
-      end)
-      vim.keymap.set("n", "<leader>e", function()
-        builtin.file_browser({
-          path = "%:p:h",
-          cwd = telescope_buffer_dir(),
-          hidden = true,
-          layout_config = { height = 40 },
-        })
       end)
     end,
   },
