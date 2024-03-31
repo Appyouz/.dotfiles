@@ -43,4 +43,5 @@ XF86AudioLowerVolume
 XF86AudioMute
 	changevolume mute
 
-
+super + space 
+  rofi -show drun
