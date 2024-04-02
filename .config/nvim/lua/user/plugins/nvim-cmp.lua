@@ -42,6 +42,10 @@ Plugin.dependencies = {
       -- <TAB>
       local luasnip = require('luasnip')
 
+      local unlinkgrp = vim.api.nvim_create_augroup(
+        'UnlinkSnippetOnModeChange',
+        { clear = true }
+      )
       vim.api.nvim_create_autocmd("ModeChanged", {
         group = vim.api.nvim_create_augroup("UnlinkLuaSnipSnippetOnModeChange", {
           clear = true,
@@ -80,6 +84,7 @@ function Plugin.config()
 
   require('luasnip.loaders.from_vscode').lazy_load()
 
+  local select_opts = { behavior = cmp.SelectBehavior.Select }
 
   -- See :help cmp-config
   cmp.setup({
@@ -128,24 +133,24 @@ function Plugin.config()
         "s",
       }),
     }),
-    -- formatting = {
-    --   fields = { "kind", "abbr", "menu" },
-    --   format = function(entry, vim_item)
-    --     vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-    --     vim_item.menu = ({
-    --       nvim_lsp = "[LSP]",
-    --       luasnip = "[Snippet]",
-    --       buffer = "[Buffer]",
-    --       path = "[Path]",
-    --     })[entry.source.name]
-    --     return vim_item
-    --   end,
-    -- },
+    formatting = {
+      fields = { "kind", "abbr", "menu" },
+      format = function(entry, vim_item)
+        vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+        vim_item.menu = ({
+          nvim_lsp = "[LSP]",
+          luasnip = "[Snippet]",
+          buffer = "[Buffer]",
+          path = "[Path]",
+        })[entry.source.name]
+        return vim_item
+      end,
+    },
     sources = cmp.config.sources({
       { name = "nvim_lsp" },
-      -- { name = "luasnip" }, -- For luasnip users.
-      -- { name = "buffer" },
-      -- { name = "path" },
+      { name = "luasnip" }, -- For luasnip users.
+      { name = "buffer" },
+      { name = "path" },
     }),
     confirm_opts = {
       behavior = cmp.ConfirmBehavior.Replace,
@@ -180,20 +185,20 @@ function Plugin.config()
     cmp_autopairs.on_confirm_done()
   )
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-  -- cmp.setup.cmdline(":", {
-  --   mapping = cmp.mapping.preset.cmdline(),
-  --   sources = cmp.config.sources({
-  --     { name = "path" },
-  --   }, {
-  --     { name = "cmdline" },
-  --   }),
-  -- })
-  --
+  cmp.setup.cmdline(":", {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = "path" },
+    }, {
+      { name = "cmdline" },
+    }),
+  })
 
-  -- vim.cmd [[
-  --   set completeopt=menuone,noinsert,noselect
-  --   highlight! default link CmpItemKind CmpItemMenuDefault
-  -- ]]
+
+  vim.cmd [[
+    set completeopt=menuone,noinsert,noselect
+    highlight! default link CmpItemKind CmpItemMenuDefault
+  ]]
 end
 
 return Plugin
