@@ -71,7 +71,7 @@ return {
         flags = lsp_flags,
         capabilities = capabilities,
       })
-      require("lspconfig")["tsserver"].setup({
+      require("lspconfig")["ts_ls"].setup({
         on_attach = on_attach,
         flags = lsp_flags,
         capabilities = capabilities,
@@ -115,11 +115,11 @@ return {
 
         init_option = { fallbackFlags = { "-std=c++2a" } },
       })
-      -- require("lspconfig")["emmet-language-server"].setup({
-      --   on_attach = on_attach,
-      --   capabilities = capabilities,
-      --   flags = lsp_flags,
-      -- })
+      require("lspconfig")["emmet_ls"].setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        flags = lsp_flags,
+      })
 
       require("lspconfig")["html"].setup({
         on_attach = on_attach,
