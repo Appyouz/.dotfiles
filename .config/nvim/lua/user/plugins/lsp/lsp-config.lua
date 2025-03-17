@@ -18,35 +18,35 @@ return {
       })
     end,
   },
-
+  {
+    "j-hui/fidget.nvim", -- Added for LSP status indicators
+    opts = {},
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
       local nvim_lsp = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      -- local capabilities = vim.lsp.protocol.make_client_capabilities()
-      capabilities.offsetEncoding = 'utf-8'
+      capabilities.offsetEncoding = "utf-8"
       local lsp_flags = {
-        -- This is the default in Nvim 0.7+
         debounce_text_changes = 150,
       }
       local on_attach = function(client, bufnr)
-        -- Enable completion triggered by <c-x><c-o>
-        vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+        -- vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
+        vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
         local bufopts = { noremap = true, silent = true, buffer = bufnr }
         vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
         vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
-        -- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
-        vim.keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts) -- jump to previous diagnostic in buffer
-        vim.keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts) -- jump to next diagnostic in buffer
+        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts) -- Uncommented
+        vim.keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
+        vim.keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts)
         vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, bufopts)
         vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
         vim.keymap.set("n", "<space>wl", function()
           print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
         end, bufopts)
-
-        -- vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts) -- Uncommented
         vim.keymap.set("n", "<space>f", function()
           vim.lsp.buf.format({ async = true })
         end, bufopts)
@@ -70,32 +70,57 @@ return {
         on_attach = on_attach,
         flags = lsp_flags,
         capabilities = capabilities,
+        cmd = { "pyright-langserver", "--stdio" },
+        filetypes = { "python" },
+        settings = {
+          python = {
+            analysis = {
+              autoSearchPaths = true,
+              diagnosticMode = "openFilesOnly",
+              useLibraryCodeForTypes = true,
+              typeCheckingMode = "strict",
+              autoImportCompletions = true,
+              diagnosticSeverityOverrides = { -- Added for finer control
+                reportUnusedVariable = "warning",
+                reportUndefinedVariable = "error",
+              },
+            },
+          },
+        },
       })
       require("lspconfig")["ts_ls"].setup({
         on_attach = on_attach,
         flags = lsp_flags,
         capabilities = capabilities,
+        settings = { -- Added inlay hints
+          typescript = {
+            inlayHints = {
+              includeInlayParameterNameHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayVariableTypeHints = true,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayEnumMemberValueHints = true,
+            },
+          },
+        },
       })
-
       require("lspconfig")["lua_ls"].setup({
         on_attach = on_attach,
         flags = lsp_flags,
         capabilities = capabilities,
         settings = {
           Lua = {
-            diagnostics = {
-              -- Get the language server to recognize the `vim` global
-              globals = { "vim" },
-            },
+            diagnostics = { globals = { "vim" } },
             workspace = {
-              -- Make the server aware of Neovim runtime files
               library = vim.api.nvim_get_runtime_file("", true),
               checkThirdParty = false,
             },
+            telemetry = { enable = false }, -- Added to disable telemetry
           },
         },
       })
-
       require("lspconfig")["clangd"].setup({
         cmd = { "clangd" },
         filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
@@ -112,21 +137,36 @@ return {
           "configure.ac",
           ".git"
         ),
-
-        init_option = { fallbackFlags = { "-std=c++2a" } },
+        init_options = { fallbackFlags = { "-std=c++2a" } },
       })
       require("lspconfig")["emmet_ls"].setup({
         on_attach = on_attach,
         capabilities = capabilities,
         flags = lsp_flags,
+        cmd = { "emmet-ls", "--stdio" },
+        filetypes = {
+          "astro",
+          "css",
+          "eruby",
+          "html",
+          "htmldjango",
+          "javascriptreact",
+          "less",
+          "pug",
+          "sass",
+          "scss",
+          "svelte",
+          "typescriptreact",
+          "vue",
+          "htmlangular",
+        },
       })
-
       require("lspconfig")["html"].setup({
         on_attach = on_attach,
         capabilities = capabilities,
         flags = lsp_flags,
+        provideFormatter = true, -- Added for built-in formatting
       })
-
       require("lspconfig")["marksman"].setup({
         on_attach = on_attach,
         capabilities = capabilities,
@@ -135,11 +175,10 @@ return {
         single_file_support = true,
         flags = lsp_flags,
       })
-
       require("lspconfig")["cmake"].setup({
         cmd = { "cmake-language-server" },
         filetypes = { "cmake" },
-        init_option = { buildDirectory = "build" },
+        init_options = { buildDirectory = "build" },
         root_dir = nvim_lsp.util.root_pattern(
           "CMakePresets.json",
           "CTestConfig.cmake",
@@ -149,21 +188,27 @@ return {
         ),
         single_file_support = true,
       })
-
       require("lspconfig")["gopls"].setup({
         cmd = { "gopls" },
         filetypes = { "go", "gomod", "gowork", "gotmpl" },
         root_dir = nvim_lsp.util.root_pattern("go.mod", ".git"),
         single_file_support = true,
+        on_attach = on_attach,
+        capabilities = capabilities,
+        flags = lsp_flags,
+        settings = { -- Added for better Go analysis
+          gopls = {
+            analyses = { unusedparams = true },
+            staticcheck = true,
+          },
+        },
       })
       local function lsp_highlight_document(client)
-        -- Set autocommands conditional on server_capabilities
         local status_ok, illuminate = pcall(require, "illuminate")
         if not status_ok then
           return
         end
         illuminate.on_attach(client)
-        -- end
       end
 
       vim.lsp.handlers["textDocument/publishDiagnostics"] =
@@ -174,7 +219,6 @@ return {
             severity_sort = true,
           })
 
-      -- Diagnostic symbols in the sign column (gutter)
       local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
       for type, icon in pairs(signs) do
         local hl = "DiagnosticSign" .. type
@@ -182,14 +226,12 @@ return {
       end
 
       vim.diagnostic.config({
-        virtual_text = {
-          prefix = "●",
-        },
+        virtual_text = { prefix = "●" },
         update_in_insert = true,
         underline = true,
         severity_sort = true,
         float = {
-          source = "always", -- Or "if_many"
+          source = "always",
           focusable = false,
           style = "minimal",
           border = "rounded",
@@ -199,36 +241,25 @@ return {
       })
     end,
   },
-
   {
-
     "glepnir/lspsaga.nvim",
     config = function()
       require("lspsaga").setup({
-        server_filetype_map = {
-          typescript = "typescript",
-        },
+        server_filetype_map = { typescript = "typescript" },
         scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
-        -- use enter to open file with definition preview
-        definition = {
-          edit = "<CR>",
-        },
+        definition = { edit = "<CR>" },
         ui = {
           winblend = 10,
           border = "rounded",
-          colors = {
-            normal_bg = "#002b36",
-          },
+          colors = { normal_bg = "#002b36" },
         },
       })
       local opts = { noremap = true, silent = true }
-      -- vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
       vim.keymap.set("n", "gd", "<Cmd>Lspsaga lsp_finder<CR>", opts)
+      vim.keymap.set("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", opts) -- Added for peek definition
       vim.keymap.set("i", "<C-k>", "<Cmd>Lspsaga signature_help<CR>", opts)
-      -- vim.keymap.set("n", "gp", "<Cmd>Lspsaga preview_definition<CR>", opts)
       vim.keymap.set("n", "<leader>rn", "<Cmd>Lspsaga rename<CR>", opts)
 
-      -- code action
       local codeaction = require("lspsaga.codeaction")
       vim.keymap.set("n", "<leader>ca", function()
         codeaction:code_action()
@@ -240,3 +271,4 @@ return {
     end,
   },
 }
+
