@@ -36,7 +36,7 @@ return {
 
         vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
         local bufopts = { noremap = true, silent = true, buffer = bufnr }
-        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
+        -- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
         vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts) -- Uncommented
         vim.keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
@@ -46,7 +46,7 @@ return {
         vim.keymap.set("n", "<space>wl", function()
           print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
         end, bufopts)
-        vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts) -- Uncommented
+        -- vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts) -- Uncommented
         vim.keymap.set("n", "<space>f", function()
           vim.lsp.buf.format({ async = true })
         end, bufopts)
@@ -78,7 +78,7 @@ return {
               autoSearchPaths = true,
               diagnosticMode = "openFilesOnly",
               useLibraryCodeForTypes = true,
-              typeCheckingMode = "strict",
+              -- typeCheckingMode = "strict",
               autoImportCompletions = true,
               diagnosticSeverityOverrides = { -- Added for finer control
                 reportUnusedVariable = "warning",
