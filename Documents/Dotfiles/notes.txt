@@ -16,3 +16,10 @@
 -> pamixer and pulseaudio for 'changevolume script'
 -> backlight.rules for brillo
 -> tumbler [for tumbnails in thunar file manager]
+
+# Pacman mirror issue fix:
+1  Generate mirrorlist at https://archlinux.org/mirrorlist with mirror status enabled, to only include up to date mirrors
+2. Copy & Paste the mirrorlist into /etc/pacman.d/mirrorlist.generated
+3. Run sudo sed -i "s/^#Server/Server/" /etc/pacman.d/mirrorlist.generated to enable all the newly generated mirrors
+4. Run sudo sh -c "rankmirrors -n 6 /etc/pacman.d/mirrorlist.generated > /etc/pacman.d/mirrorlist" to choose the 6 speediest mirrors for mirrorlist
+5. Run pacman -Syyuu to refresh the pacman database and ensure installed packages correspond to the versions offered by the new mirrorlist
