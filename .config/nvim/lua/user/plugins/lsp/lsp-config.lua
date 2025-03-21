@@ -66,12 +66,13 @@ return {
           end,
         })
       end
-      require("lspconfig")["pyright"].setup({
+      require("lspconfig")["basedpyright"].setup({
         on_attach = on_attach,
         flags = lsp_flags,
         capabilities = capabilities,
         cmd = { "pyright-langserver", "--stdio" },
         filetypes = { "python" },
+        single_file_support = true,
         settings = {
           python = {
             analysis = {
@@ -271,4 +272,3 @@ return {
     end,
   },
 }
-
