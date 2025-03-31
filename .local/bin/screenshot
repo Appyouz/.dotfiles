@@ -1,10 +1,26 @@
-#! /bin/sh
-output='/home/mac/pictures/screenshots/%Y-%m-%d-%T-screenshot.png'
+#!/bin/sh
 
+# Directory where screenshots will be saved
+output_dir="$HOME/pictures/screenshots"
+mkdir -p "$output_dir"
+
+# Get active window name and sanitize it for filename use
+app_name=$(xdotool getwindowfocus getwindowname | awk '{print $1}' | tr -d ':/\\*?"<>|')
+
+# Generate filename with app name and timestamp
+output_file="${app_name}_$(date '+%Y-%m-%d_%H-%M-%S').png"
+output_path="$output_dir/$output_file"
+
+# Take screenshot based on user input
 case "$1" in
-	"select") scrot "$output" --select --line mode=edge || exit ;;
-	"window") scrot "$output" --focused --border || exit ;;
-	*) scrot "$output" || exit ;;
+    "select") scrot "$output_path" --select --line mode=edge || exit ;;
+    "window") scrot "$output_path" --focused --border || exit ;;
+    *) scrot "$output_path" || exit ;;
 esac
 
-dunstify "Screenshot taken."
+# Auto-copy screenshot to clipboard
+xclip -selection clipboard -t image/png -i "$output_path"
+
+# Send a simple notification
+dunstify -i "$output_path" -u normal "Screenshot Taken" \
+    "<b>File:</b> $output_file\n<b>Saved to:</b> $output_dir\n📋 Copied to clipboard!"
