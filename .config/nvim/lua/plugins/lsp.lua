@@ -128,11 +128,127 @@ return {
 		local servers = {
 			bashls = {},
 			marksman = {},
-			clangd = {},
-			pyright = {},
+			clangd = {
+				cmd = { "clangd" },
+				filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+				single_file_support = true,
+				on_attach = on_attach,
+				capabilities = capabilities,
+				flags = lsp_flags,
+				root_markers = {
+					".clangd",
+					".clang-tidy",
+					".clang-format",
+					"compile_commands.json",
+					"compile_flags.txt",
+					"configure.ac",
+					".git",
+				},
+				init_options = { fallbackFlags = { "-std=c++2a" } },
+			},
+			pyright = {
+				on_attach = on_attach,
+				flags = lsp_flags,
+				capabilities = capabilities,
+				cmd = { "pyright-langserver", "--stdio" },
+				filetypes = { "python" },
+				single_file_support = true,
+				settings = {
+					python = {
+						analysis = {
+							autoSearchPaths = true,
+							diagnosticMode = "openFilesOnly",
+							useLibraryCodeForTypes = true,
+							-- typeCheckingMode = "strict",
+							autoImportCompletions = true,
+							diagnosticSeverityOverrides = { -- Added for finer control
+								reportUnusedVariable = "warning",
+								reportUndefinedVariable = "error",
+							},
+						},
+					},
+				},
+			},
 			basedpyright = {},
 			jinja_lsp = {},
-			lua_ls = {},
+			lua_ls = {
+				on_attach = on_attach,
+				flags = lsp_flags,
+				capabilities = capabilities,
+				settings = {
+					Lua = {
+						diagnostics = { globals = { "vim" } },
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+							checkThirdParty = false,
+						},
+						telemetry = { enable = false }, -- Added to disable telemetry
+					},
+				},
+			},
+			emmet_ls = {
+
+				on_attach = on_attach,
+				capabilities = capabilities,
+				flags = lsp_flags,
+				cmd = { "emmet-ls", "--stdio" },
+				filetypes = {
+					"astro",
+					"css",
+					"eruby",
+					"html",
+					"htmldjango",
+					"javascriptreact",
+					"less",
+					"pug",
+					"sass",
+					"scss",
+					"svelte",
+					"typescriptreact",
+					"vue",
+					"htmlangular",
+				},
+			},
+			ts_ls = {
+				on_attach = on_attach,
+				flags = lsp_flags,
+				capabilities = capabilities,
+				settings = { -- Added inlay hints
+					typescript = {
+						inlayHints = {
+							includeInlayParameterNameHints = "all",
+							includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+							includeInlayFunctionParameterTypeHints = true,
+							includeInlayVariableTypeHints = true,
+							includeInlayPropertyDeclarationTypeHints = true,
+							includeInlayFunctionLikeReturnTypeHints = true,
+							includeInlayEnumMemberValueHints = true,
+						},
+					},
+				},
+			},
+			html = {
+				on_attach = on_attach,
+				capabilities = capabilities,
+				flags = lsp_flags,
+				provideFormatter = true, -- Added for built-in formatting
+			},
+
+			cmake = {
+				cmd = { "cmake-language-server" },
+				filetypes = { "cmake" },
+				init_options = { buildDirectory = "build" },
+				root_markers = {
+					"CMakePresets.json",
+					"CTestConfig.cmake",
+					".git",
+					"build",
+					"cmake",
+				},
+				single_file_support = true,
+			},
+
+			-- End of server configs
 		}
 
 		local ensure_installed = vim.tbl_keys(servers or {})
