@@ -1,0 +1,10 @@
+# Best practices for C++
+
+-> Prefer pass by reference to pass by address unless
+  you have a specific reason to use pass by address.
+
+-> Avoid returning references to non-const local static variables.
+-> Name your program-defined types starting with a capital letter and do not use a suffix.
+-> Avoid assigning explicit values to your enumerators unless you have a compelling reason to do so.
+-> Favor scoped enumerations over unscoped enumerations unless there’s a compelling reason to do otherwise.
+-> Prefer the (non-copy) braced list form when initializing aggregates.

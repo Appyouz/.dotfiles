@@ -169,29 +169,6 @@ return {
 				},
 				init_options = { fallbackFlags = { "-std=c++2a" } },
 			},
-			pyright = {
-				on_attach = on_attach,
-				flags = lsp_flags,
-				capabilities = capabilities,
-				cmd = { "pyright-langserver", "--stdio" },
-				filetypes = { "python" },
-				single_file_support = true,
-				settings = {
-					python = {
-						analysis = {
-							autoSearchPaths = true,
-							diagnosticMode = "openFilesOnly",
-							useLibraryCodeForTypes = true,
-							-- typeCheckingMode = "strict",
-							autoImportCompletions = true,
-							diagnosticSeverityOverrides = { -- Added for finer control
-								reportUnusedVariable = "warning",
-								reportUndefinedVariable = "error",
-							},
-						},
-					},
-				},
-			},
 			basedpyright = {
 				cmd = { "basedpyright-langserver", "--stdio" },
 				on_attach = on_attach,
@@ -274,6 +251,7 @@ return {
 				capabilities = capabilities,
 				flags = lsp_flags,
 				provideFormatter = true, -- Added for built-in formatting
+				filetypes = { "html", "htmldjango" }, -- Explicitly include htmldjango
 			},
 			cmake = {
 				cmd = { "cmake-language-server" },
@@ -313,8 +291,8 @@ return {
 			},
 		})
 
-		vim.opt.completeopt = { "menuone", "noselect", "popup" }
-		vim.keymap.set("i", "<c-space>", vim.lsp.completion.get)
-		vim.keymap.set("i", "<cr>", "pumvisible() ? '<c-y>' : '<cr>'", { expr = true })
+		-- vim.opt.completeopt = { "menuone", "noselect", "popup" }
+		-- vim.keymap.set("i", "<c-space>", vim.lsp.completion.get)
+		-- vim.keymap.set("i", "<cr>", "pumvisible() ? '<c-y>' : '<cr>'", { expr = true })
 	end,
 }
