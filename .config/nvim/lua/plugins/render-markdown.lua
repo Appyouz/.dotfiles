@@ -8,5 +8,18 @@ return {
 	opts = {
 
 		render_modes = { "n", "c", "t" },
+
+		checkbox = {
+			unchecked = {
+				icon = " ", -- Make this icon larger (use a bigger Nerd Font symbol)
+				highlight = "RenderMarkdownUnchecked",
+			},
+			checked = {
+				icon = " ", -- Make this icon larger
+				highlight = "RenderMarkdownChecked",
+			},
+			-- Increase right padding to create more space around the checkbox
+			right_pad = 2,
+		},
 	},
 }
