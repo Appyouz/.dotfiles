@@ -83,7 +83,7 @@ return {
 					{ "mode", separator = { left = "", right = "" }, right_padding = 2 },
 				},
 				lualine_b = { branch, diagnostics },
-				lualine_c = { location },
+				lualine_c = { location, "filename" },
 				lualine_x = {},
 				lualine_y = { diff, "encoding", fileformat, filetype },
 				lualine_z = {
