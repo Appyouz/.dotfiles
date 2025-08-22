@@ -269,6 +269,21 @@ return {
 				flags = lsp_flags,
 				capabilities = capabilities,
 			},
+
+			prettier = {
+				bin = "prettierd",
+				filetypes = {
+					"css",
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact",
+					"json",
+					"scss",
+					"less",
+				},
+			},
+
 			-- End of server configs
 		}
 
