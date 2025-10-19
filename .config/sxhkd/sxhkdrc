@@ -1,47 +1,65 @@
-#
 
-# make sxhkd reload its configuration files:
+# -------------------------------
+# sxhkd Configuration
+# Location: ~/.config/sxhkd/sxhkdrc
+# For Bajeal USB Keyboard (no Fn keys)
+# -------------------------------
+
+# --- SYSTEM / WM ---
+
+# Reload sxhkd
 super + Escape
-	pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd
 
 # Kill dwm
 super + shift + Escape
-  pkill dwm
+    pkill dwm
 
-# xkill
-ctrl + alt + k
-  xkill
+# Lock screen
+super + x
+    betterlockscreen -l
 
-# Lock screen 
-super + x 
- betterlockscreen -l
+# --- APPLICATION LAUNCHER ---
+super + space
+    rofi -show drun
 
-# printscreen
+# --- SCREENSHOTS ---
 @Print
-	screenshot
+    screenshot
 
 shift + @Print
-	screenshot select
+    screenshot select
 
 control + @Print
-	screenshot window
+    screenshot window
 
-# brightness keys
-XF86MonBrightnessUp
-	brightness up
+# Super + F10 = mute, Super + F11 = up, Super + F12 = down
+super + F10
+    ~/.local/bin/changevolume down 
 
-XF86MonBrightnessDown
-	brightness down
+super + F11
+    ~/.local/bin/changevolume up
 
-# volume keys
-XF86AudioRaiseVolume
-	changevolume up
+super + F12
+    ~/.local/bin/changevolume mute
 
-XF86AudioLowerVolume
-	changevolume down
+# --- ALTERNATE CONTROLS (NUMPAD FALLBACK) ---
+super + KP_Add
+    ~/.local/bin/changevolume up
 
-XF86AudioMute
-	changevolume mute
+super + KP_Subtract
+    ~/.local/bin/changevolume down
 
-super + space 
-  rofi -show drun
+super + KP_Multiply
+    ~/.local/bin/changevolume mute
+
+super + F5
+    ~/.local/bin/brightness down
+
+super + F6
+    ~/.local/bin/brightness up
+
+# --- WIFI TOGGLE ---
+super + w
+      ~/.local/bin/wifitoggle.sh
+
