@@ -1,5 +1,6 @@
 xrandr --output LVDS1 --mode 1366x768 &
 xrandr --output LVDS1 --auto &
+# (redshift -c ~/.config/redshift/redshift.conf &) >/dev/null 2>&1
 dunst &
 sxhkd &
 wal -R &
