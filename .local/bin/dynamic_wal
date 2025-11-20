@@ -11,4 +11,8 @@ echo "Recompiling dwm..."
 (cd $HOME/.local/src/suckless/dwm && sudo make clean install>/dev/null) &
 (cd $HOME/.local/src/suckless/dmenu && sudo make clean install>/dev/null) &
 (cd $HOME/.local/src/suckless/st && sudo make clean install>/dev/null)
+
+echo "Reloading Alacritty colors..."
+pkill -USR1 alacritty
+
 echo "Restart dwm for the new look"
