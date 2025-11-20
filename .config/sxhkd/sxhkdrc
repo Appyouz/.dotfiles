@@ -60,6 +60,9 @@ super + F6
     ~/.local/bin/brightness up
 
 # --- WIFI TOGGLE ---
-super + w
+super + F2
       ~/.local/bin/wifitoggle.sh
 
+
+super + F1
+      ~/.local/bin/bt_toggle.sh

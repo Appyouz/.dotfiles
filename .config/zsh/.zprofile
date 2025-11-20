@@ -29,6 +29,12 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XINITRC="$HOME/.xinitrc"
 export PATH=$PATH:$HOME/.local/bin
 
+
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+
 # [[ -f ~/.config/zsh ]] && . ~/.config/zsh
 # [ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 ] && exec startx
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
