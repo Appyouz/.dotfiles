@@ -88,7 +88,6 @@ static const struct arg args[] = {
     { wifi_essid,       "  %s ",           "wlp6s0" },
   //	{ run_command,	" %s ", "updates.sh " },
 	//{ run_command,	" %s ", "vol.sh " },
-
   { run_command,         " %s ",              "bt_status.sh" },
   { run_command,	" %s ", "battery" },
   { datetime,         "  %s ",        "%a, %d/%m/%y" },
