@@ -1,25 +1,23 @@
-return {
-	"MeanderingProgrammer/render-markdown.nvim",
-	-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-	-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-	dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
-	---@module 'render-markdown'
-	---@type render.md.UserConfig
-	opts = {
+-- Wait for plugin to load
+vim.defer_fn(function()
+	local ok, markdown = pcall(require, "render-markdown")
+	if not ok then
+		vim.notify("render-markdown.nvim not loaded", vim.log.levels.WARN)
+		return
+	end
 
+	markdown.setup({
 		render_modes = { "n", "c", "t" },
-
 		checkbox = {
 			unchecked = {
-				icon = " ", -- Make this icon larger (use a bigger Nerd Font symbol)
+				icon = " ",
 				highlight = "RenderMarkdownUnchecked",
 			},
 			checked = {
-				icon = " ", -- Make this icon larger
+				icon = " ",
 				highlight = "RenderMarkdownChecked",
 			},
-			-- Increase right padding to create more space around the checkbox
 			right_pad = 2,
 		},
-	},
-}
+	})
+end, 100)

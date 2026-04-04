@@ -1,17 +1,14 @@
-return {
-	"stevearc/oil.nvim",
-	---@module 'oil'
-	---@type oil.SetupOpts
-	opts = {
-		view_options = {
-			show_hidden = true,
-		},
+local oil = require("oil")
+
+oil.setup({
+	view_options = {
+		show_hidden = true,
 	},
-	-- Optional dependencies
-	dependencies = {
-		{ "nvim-tree/nvim-web-devicons", opts = {} },
+float = {
+		padding = 2,
+		max_width = 80,
+		max_height = 20,
+		border = "rounded",
 	},
-	-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-	-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
-	lazy = false,
-}
+})
+

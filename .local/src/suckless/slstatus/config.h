@@ -83,11 +83,11 @@ static const char unknown_str[] = "n/a";
 
 static const struct arg args[] = {
     /* function         format              argument */
+  //	{ run_command,	" %s ", "updates.sh " },
+	//{ run_command,	" %s ", "vol.sh " },
     { disk_free,          " %s " ,                  "/"      },
     { disk_total,         "/%s " ,                  "/"      },
     { wifi_essid,       "  %s ",           "wlp6s0" },
-  //	{ run_command,	" %s ", "updates.sh " },
-	//{ run_command,	" %s ", "vol.sh " },
 
   { run_command,         " %s ",              "bt_status.sh" },
   { run_command,	" %s ", "battery" },

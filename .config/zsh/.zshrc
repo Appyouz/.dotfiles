@@ -143,6 +143,7 @@ eval "$(pyenv init -)"
 
 
 
+export TERM=st-256color
 
 
 # Edit line in vim with ctrl-e:

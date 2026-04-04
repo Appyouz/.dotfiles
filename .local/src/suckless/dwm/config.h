@@ -47,6 +47,7 @@ static const Rule rules[] = {
        monitor */
     {"Gimp", NULL, NULL, 0, 0, 1, -1},
     {"firefox", NULL, NULL, 1 << 1, 0, 0, -1},
+    {"zen", NULL, NULL, 1 << 1, 0, 0, -1},
     {"Chromium", NULL, NULL, 1 << 2, 0, 0, -1},
     {"Brave", NULL, NULL, 1 << 2, 0, 0, -1},
 };
