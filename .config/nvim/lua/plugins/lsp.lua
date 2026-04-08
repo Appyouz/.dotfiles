@@ -99,7 +99,19 @@ vim.lsp.config("basedpyright", {
 vim.lsp.config("clangd", {
 	capabilities = caps,
 	init_options = {
-		fallbackFlags = { "-std=c++2a" },
+		fallbackFlags = { "-std=c++20" },
+	},
+	settings = {
+		clangd = {
+			-- Show documentation in a cleaner way
+			completion = {
+				detailedLabel = true,
+			},
+			-- Improve hover documentation
+			hover = {
+				showKinds = true,
+			},
+		},
 	},
 })
 

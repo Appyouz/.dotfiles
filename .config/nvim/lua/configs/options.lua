@@ -40,6 +40,7 @@ local options = {
 	smarttab = true,
 	list = true,
 	listchars = { tab = "» ", trail = "·", nbsp = "␣" },
+	laststatus = 3,
 }
 
 vim.opt.shortmess:append("c")

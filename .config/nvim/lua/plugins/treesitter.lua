@@ -35,8 +35,15 @@ vim.api.nvim_create_autocmd("FileType", {
 
 		-- skip special/plugin buffers
 		local skip_filetypes = {
-			"fidget", "qf", "help", "startuptime", "lspinfo",
-			"neo-tree", "TelescopePrompt", "NvimTree", "oil"
+			"fidget",
+			"qf",
+			"help",
+			"startuptime",
+			"lspinfo",
+			"neo-tree",
+			"TelescopePrompt",
+			"NvimTree",
+			"oil",
 		}
 		if vim.tbl_contains(skip_filetypes, vim.bo[args.buf].filetype) then
 			return

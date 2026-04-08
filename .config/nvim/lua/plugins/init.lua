@@ -28,6 +28,8 @@ vim.pack.add({
 	"https://www.github.com/echasnovski/mini.nvim",
 
 	"https://github.com/folke/snacks.nvim",
+
+	"https://github.com/ThePrimeagen/vim-be-good",
 })
 require("plugins.oil")
 require("plugins.gruvbox")

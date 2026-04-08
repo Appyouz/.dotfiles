@@ -32,12 +32,31 @@ local function file_type()
 	if ft == "" then
 		return "   "
 	end
-	-- Note: If you have nvim-web-devicons installed, you could use that here
-	-- but for native/lightweight we stick to the string
 	return " " .. ft .. " "
 end
 
--- Progress bar logic
+-- Line and Column numbers
+local function line_col()
+	local line = vim.fn.line(".")
+	local col = vim.fn.col(".")
+	local total_lines = vim.fn.line("$")
+	return string.format(" %d:%d/%d ", line, col, total_lines)
+end
+
+-- UTF-8 indicator
+local function utf_indicator()
+	-- Check if current buffer is UTF-8
+	local enc = vim.bo.fileencoding
+	if enc == "utf-8" or enc == "utf8" then
+		return " UTF-8 "
+	elseif enc == nil or enc == "" then
+		return ""
+	else
+		return " " .. string.upper(enc) .. " "
+	end
+end
+
+-- Progress bar
 local function progress_bar()
 	local curr = vim.fn.line(".")
 	local total = vim.fn.line("$")
@@ -61,30 +80,30 @@ local function mode_label()
 	return modes[m] or m
 end
 
--- 2. GLOBAL ACCESS
+--  GLOBAL ACCESS
 _G.st_mode = mode_label
 _G.st_git = git_branch
 _G.st_diag = diagnostics
 _G.st_ft = file_type
 _G.st_progress = progress_bar
+_G.st_line_col = line_col
+_G.st_utf = utf_indicator
 
--- 3. THEME-LINKED HIGHLIGHTS
+--  Theme Linked HighLights
 local function set_hl()
-	-- We link custom groups to theme's existing colors
+	-- link custom groups to theme's existing colors
 	-- This ensures it changes switch colorschemes
-	vim.api.nvim_set_hl(0, "St_Primary", { link = "CursorLineNr" }) -- The "Accent" (Mode/Progress)
-	vim.api.nvim_set_hl(0, "St_Secondary", { link = "StatusLine" }) -- The "Body"
+	vim.api.nvim_set_hl(0, "St_Primary", { link = "CursorLineNr" })
+	vim.api.nvim_set_hl(0, "St_Secondary", { link = "StatusLine" })
 	vim.api.nvim_set_hl(0, "St_Ghost", { fg = vim.api.nvim_get_hl(0, { name = "StatusLine" }).bg, bg = "NONE" })
+	vim.api.nvim_set_hl(0, "St_Info", { link = "Comment" })
 end
 set_hl()
 
--- 4. STATUSLINE GENERATOR
 local function active_line()
 	return table.concat({
-		-- Left Section (Mode)
 		"%#St_Primary# %{v:lua.st_mode()} ",
 
-		-- Branch & Diagnostics (using standard statusline colors)
 		"%#StatusLine#",
 		"%{v:lua.st_git()}",
 		"%{v:lua.st_diag()} ",
@@ -92,13 +111,14 @@ local function active_line()
 		-- Filename
 		" %t %m %r",
 
-		-- Spacer
 		"%#Normal#%=",
 
-		-- Right Section (Filetype & Progress)
-		"%#StatusLine# %{v:lua.st_ft()} ",
+		-- Right Section (UTF, Line/Col, Filetype & Progress)
+		"%#St_Info#%{v:lua.st_utf()}",
+		"%#StatusLine#%{v:lua.st_line_col()}",
+		"%{v:lua.st_ft()} ",
 
-		-- "%#StatusLine# %y ", -- %y shows filetype automatically
+		-- Progress bar
 		"%#St_Primary# %{v:lua.st_progress()} ",
 	})
 end

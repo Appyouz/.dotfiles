@@ -15,6 +15,14 @@ blink.setup({
 
 	completion = {
 		menu = { auto_show = true },
+		documentation = {
+			auto_show = true, -- Automatically show docs for selected item
+			window = {
+				border = "rounded",
+				max_height = 20,
+				max_width = 60,
+			},
+		},
 	},
 
 	sources = {
