@@ -29,6 +29,10 @@
       "rev": "cec765e35bf99247e0dc7ef62ec375463edd7bcf",
       "src": "https://github.com/f4z3r/gruvbox-material.nvim"
     },
+    "kotlin.nvim": {
+      "rev": "bc8ed5523db7e0ec2c00e26a17858e4c54d86072",
+      "src": "https://github.com/AlexandrosAlexiou/kotlin.nvim"
+    },
     "mason-lspconfig.nvim": {
       "rev": "25f609e7fca78af7cede4f9fa3af8a94b1c4950b",
       "src": "https://github.com/williamboman/mason-lspconfig.nvim"

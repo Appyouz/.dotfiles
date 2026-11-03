@@ -53,6 +53,10 @@ require("mason-lspconfig").setup({
 		"marksman",
 	},
 	automatic_installation = true,
+
+	automatic_enable = {
+		exclude = { "kotlin_lsp" },
+	},
 })
 
 require("mason-tool-installer").setup({

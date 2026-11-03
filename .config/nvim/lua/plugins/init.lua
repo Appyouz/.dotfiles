@@ -30,6 +30,8 @@ vim.pack.add({
 	"https://github.com/folke/snacks.nvim",
 
 	"https://github.com/ThePrimeagen/vim-be-good",
+
+	"https://github.com/AlexandrosAlexiou/kotlin.nvim",
 })
 require("plugins.oil")
 require("plugins.gruvbox")
@@ -42,3 +44,4 @@ require("plugins.render-markdown")
 require("plugins.conform")
 require("plugins.mini")
 require("plugins.snacks")
+require("plugins.kotlin")
